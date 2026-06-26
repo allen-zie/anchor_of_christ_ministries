@@ -5,12 +5,32 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import TheProphet from "./pages/TheProphet";
+import Ministries from "./pages/Ministries";
+import Events from "./pages/Events";
+import Testimonies from "./pages/Testimonies";
+import Sermons from "./pages/Sermons";
+import LiveServices from "./pages/LiveServices";
+import Giving from "./pages/Giving";
+import Contact from "./pages/Contact";
+import Media from "./pages/Media";
 
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/the-prophet"} component={TheProphet} />
+      <Route path={"/ministries"} component={Ministries} />
+      <Route path={"/events"} component={Events} />
+      <Route path={"/testimonies"} component={Testimonies} />
+      <Route path={"/media"} component={Media} />
+      <Route path={"/sermons"} component={Sermons} />
+      <Route path={"/live-services"} component={LiveServices} />
+      <Route path={"/giving"} component={Giving} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
