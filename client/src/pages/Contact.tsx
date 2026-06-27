@@ -172,10 +172,15 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                <button className="w-full px-6 py-3 bg-deep-blue text-white font-bold rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
+                <a 
+                  href="https://www.google.com/maps/search/123+Anchor+Road,+Nkulumane,+Bulawayo,+Zimbabwe" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-full px-6 py-3 bg-deep-blue text-white font-bold rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+                >
                   <Send size={16} />
                   GET DIRECTIONS
-                </button>
+                </a>
               </div>
 
               {/* Connect With Us Card */}
@@ -185,16 +190,16 @@ export default function Contact() {
                   Follow our journey and stay updated on our mission.
                 </p>
                 <div className="flex gap-4">
-                  <a href="#" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Facebook size={20} />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Instagram size={20} />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
+                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Youtube size={20} />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Twitter size={20} />
                   </a>
                 </div>
@@ -203,7 +208,10 @@ export default function Contact() {
 
             {/* Middle Column - Contact Methods */}
             <div className="space-y-6">
-              <div className="fade-in p-6 bg-gradient-to-br from-deep-blue to-blue-700 text-white rounded-2xl shadow-lg text-center">
+              <a 
+                href="mailto:info@aocim.org" 
+                className="fade-in p-6 bg-gradient-to-br from-deep-blue to-blue-700 text-white rounded-2xl shadow-lg text-center hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer"
+              >
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <Mail className="w-8 h-8" />
@@ -211,9 +219,12 @@ export default function Contact() {
                 </div>
                 <h3 className="font-bold mb-2 text-lg">EMAIL US</h3>
                 <p className="text-sm text-gray-100">info@aocim.org</p>
-              </div>
+              </a>
 
-              <div className="fade-in p-6 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl shadow-lg text-center">
+              <a 
+                href="tel:+263771234567" 
+                className="fade-in p-6 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl shadow-lg text-center hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer"
+              >
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <Phone className="w-8 h-8" />
@@ -221,9 +232,14 @@ export default function Contact() {
                 </div>
                 <h3 className="font-bold mb-2 text-lg">CALL US</h3>
                 <p className="text-sm text-gray-100">+263 77 123 4567</p>
-              </div>
+              </a>
 
-              <div className="fade-in p-6 bg-gradient-to-br from-gold to-yellow-600 text-white rounded-2xl shadow-lg text-center">
+              <a 
+                href="https://www.aocim.org" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="fade-in p-6 bg-gradient-to-br from-gold to-yellow-600 text-white rounded-2xl shadow-lg text-center hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer"
+              >
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <Globe className="w-8 h-8" />
@@ -231,7 +247,7 @@ export default function Contact() {
                 </div>
                 <h3 className="font-bold mb-2 text-lg">WEBSITE</h3>
                 <p className="text-sm text-gray-100">www.aocim.org</p>
-              </div>
+              </a>
 
               <div className="fade-in p-6 bg-gradient-to-br from-pink-400 to-pink-500 text-white rounded-2xl shadow-lg text-center">
                 <div className="flex justify-center mb-4">
@@ -348,6 +364,27 @@ export default function Contact() {
                 </form>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-deep-blue mb-4">Find Us on the Map</h2>
+            <p className="text-lg text-gray-600">Visit our church location in Bulawayo, Zimbabwe</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.0989891234567!2d28.5833!3d20.1500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940c5e5e5e5e5e5%3A0x1234567890abcdef!2s123%20Anchor%20Road%2C%20Nkulumane%2C%20Bulawayo%2C%20Zimbabwe!5e0!3m2!1sen!2szw!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
