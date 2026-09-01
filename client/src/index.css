@@ -45,7 +45,7 @@
 :root {
   /* Brand Colors */
   --color-gold: #D4AF37;
-  --color-deep-blue: #003D82;
+  --color-deep-blue: #4169E1; /* Royal Blue */
   --color-light-blue: #4A90E2;
   --color-red: #E63946;
   --color-pink: #F8B4D4;
@@ -53,13 +53,13 @@
   --color-light-gray: #F5F5F5;
   
   /* Primary Colors */
-  --primary: #003D82;
+  --primary: #4169E1;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #003D82;
+  --sidebar-primary: #4169E1;
   --sidebar-primary-foreground: #FFFFFF;
   --chart-1: #D4AF37;
   --chart-2: #4A90E2;
-  --chart-3: #003D82;
+  --chart-3: #4169E1;
   --chart-4: #E63946;
   --chart-5: #F8B4D4;
   --radius: 0.65rem;
@@ -79,13 +79,13 @@
   --destructive-foreground: #FFFFFF;
   --border: #E5E5E5;
   --input: #F5F5F5;
-  --ring: #003D82;
+  --ring: #4169E1;
   --sidebar: #FFFFFF;
   --sidebar-foreground: #1A1A1A;
   --sidebar-accent: #D4AF37;
   --sidebar-accent-foreground: #1A1A1A;
   --sidebar-border: #E5E5E5;
-  --sidebar-ring: #003D82;
+  --sidebar-ring: #4169E1;
 }
 
 .dark {
@@ -137,15 +137,15 @@
   }
   h1 {
     @apply text-5xl;
-    color: #003D82;
+    color: #4169E1;
   }
   h2 {
     @apply text-4xl;
-    color: #003D82;
+    color: #4169E1;
   }
   h3 {
     @apply text-2xl;
-    color: #003D82;
+    color: #4169E1;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

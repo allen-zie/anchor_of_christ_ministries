@@ -15,6 +15,11 @@ import LiveServices from "./pages/LiveServices";
 import Giving from "./pages/Giving";
 import Contact from "./pages/Contact";
 import Media from "./pages/Media";
+import MensMinistry from "./pages/MensMinistry";
+import WomensMinistry from "./pages/WomensMinistry";
+import YouthMinistry from "./pages/YouthMinistry";
+import ChildrensMinistry from "./pages/ChildrensMinistry";
+import AnnaGroup from "./pages/AnnaGroup";
 
 
 function Router() {
@@ -31,6 +36,11 @@ function Router() {
       <Route path={"/live-services"} component={LiveServices} />
       <Route path={"/giving"} component={Giving} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/men-ministry"} component={MensMinistry} />
+      <Route path={"/women-ministry"} component={WomensMinistry} />
+      <Route path={"/youth-ministry"} component={YouthMinistry} />
+      <Route path={"/children-ministry"} component={ChildrensMinistry} />
+      <Route path={"/anna-group"} component={AnnaGroup} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
