@@ -1,6 +1,6 @@
-# Contact methods reference update
+# Date-driven events update
 
-- [ ] Inspect current Contact page contact methods markup
-- [ ] Redesign contact methods to match the reference card
-- [ ] Verify clickable links, responsive layout, and build
-- [ ] Save the completed Contact page update
+- [ ] Inspect the current Events page data and layout
+- [ ] Add date-based upcoming and completed event grouping
+- [ ] Verify ordering, date boundaries, responsive layout, and build
+- [ ] Save the completed Events page update
