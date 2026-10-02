@@ -1,6 +1,6 @@
-# Ministry Pillars reference update
+# Contact methods reference update
 
-- [x] Inspect current Ministry Pillars section and reference palette
-- [ ] Redesign Ministry Pillars to match the supplied reference
-- [ ] Run checks and verify the updated home page
-- [ ] Save the completed website update
+- [ ] Inspect current Contact page contact methods markup
+- [ ] Redesign contact methods to match the reference card
+- [ ] Verify clickable links, responsive layout, and build
+- [ ] Save the completed Contact page update

@@ -208,56 +208,58 @@ export default function Contact() {
 
             {/* Middle Column - Contact Methods */}
             <div className="space-y-6">
-              <a 
-                href="mailto:info@aocim.org" 
-                className="fade-in p-6 bg-gradient-to-br from-deep-blue to-blue-700 text-white rounded-2xl shadow-lg text-center hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                    <Mail className="w-8 h-8" />
-                  </div>
-                </div>
-                <h3 className="font-bold mb-2 text-lg">EMAIL US</h3>
-                <p className="text-sm text-gray-100">info@aocim.org</p>
-              </a>
+              <div className="fade-in overflow-hidden rounded-[1.75rem] border border-white/90 bg-white/80 shadow-[0_22px_55px_rgba(18,58,130,0.14)] backdrop-blur-xl">
+                <div className="grid grid-cols-2 divide-x divide-y divide-[#dbe5f2] lg:grid-cols-4 lg:divide-y-0">
+                  <a
+                    href="mailto:info@aocim.org"
+                    aria-label="Email Anchor of Christ International Ministries"
+                    className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
+                  >
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                      <Mail className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Email Us</p>
+                    <p className="mt-2 break-words text-[0.7rem] leading-5 text-[#5c6d86]">info@aocim.org</p>
+                    <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#d8b25b]" />
+                  </a>
 
-              <a 
-                href="tel:+263771234567" 
-                className="fade-in p-6 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-2xl shadow-lg text-center hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                    <Phone className="w-8 h-8" />
-                  </div>
-                </div>
-                <h3 className="font-bold mb-2 text-lg">CALL US</h3>
-                <p className="text-sm text-gray-100">+263 77 123 4567</p>
-              </a>
+                  <a
+                    href="tel:+263771234567"
+                    aria-label="Call Anchor of Christ International Ministries"
+                    className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
+                  >
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                      <Phone className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Call Us</p>
+                    <p className="mt-2 text-[0.7rem] leading-5 text-[#5c6d86]">+263 77 123 4567</p>
+                    <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#e52d4f]" />
+                  </a>
 
-              <a 
-                href="https://www.aocim.org" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="fade-in p-6 bg-gradient-to-br from-gold to-yellow-600 text-white rounded-2xl shadow-lg text-center hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                    <Globe className="w-8 h-8" />
-                  </div>
-                </div>
-                <h3 className="font-bold mb-2 text-lg">WEBSITE</h3>
-                <p className="text-sm text-gray-100">www.aocim.org</p>
-              </a>
+                  <a
+                    href="https://www.aocim.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit the Anchor of Christ International Ministries website"
+                    className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
+                  >
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                      <Globe className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Website</p>
+                    <p className="mt-2 break-words text-[0.7rem] leading-5 text-[#5c6d86]">www.aocim.org</p>
+                    <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#d8b25b]" />
+                  </a>
 
-              <div className="fade-in p-6 bg-gradient-to-br from-pink-400 to-pink-500 text-white rounded-2xl shadow-lg text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                    <Clock className="w-8 h-8" />
+                  <div className="group px-3 py-7 text-center lg:px-2">
+                    <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10">
+                      <Clock className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Office Hours</p>
+                    <p className="mt-2 text-[0.7rem] leading-5 text-[#5c6d86]">Mon - Fri: 8AM - 5PM<br />Sat: 9AM - 1PM</p>
+                    <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#f2a9c1]" />
                   </div>
                 </div>
-                <h3 className="font-bold mb-2 text-lg">OFFICE HOURS</h3>
-                <p className="text-sm text-gray-100">Mon - Fri: 8AM - 5PM</p>
-                <p className="text-sm text-gray-100">Sat: 9AM - 1PM</p>
               </div>
             </div>
 
