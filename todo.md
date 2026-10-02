@@ -1,6 +1,6 @@
-# Date-driven events update
+# Contact page two-column update
 
-- [ ] Inspect the current Events page data and layout
-- [ ] Add date-based upcoming and completed event grouping
-- [ ] Verify ordering, date boundaries, responsive layout, and build
-- [ ] Save the completed Events page update
+- [ ] Inspect current Contact page section boundaries
+- [ ] Move contact methods below the two-column content layout
+- [ ] Verify desktop and mobile Contact layouts and build
+- [ ] Save the completed Contact layout update
