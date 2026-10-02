@@ -40,28 +40,35 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-gold: #d8b25b;
+  --color-deep-blue: #123a82;
+  --color-light-blue: #dfefff;
+  --color-red: #e52d4f;
+  --color-pink: #f2a9c1;
+  --color-dark-gray: #1f2a44;
+  --color-light-gray: #f4f8fd;
 }
 
 :root {
   /* Brand Colors */
-  --color-gold: #D4AF37;
-  --color-deep-blue: #4169E1; /* Royal Blue */
-  --color-light-blue: #4A90E2;
-  --color-red: #E63946;
-  --color-pink: #F8B4D4;
-  --color-dark-gray: #1A1A1A;
-  --color-light-gray: #F5F5F5;
+  --color-gold: #d8b25b;
+  --color-deep-blue: #123a82;
+  --color-light-blue: #dfefff;
+  --color-red: #e52d4f;
+  --color-pink: #f2a9c1;
+  --color-dark-gray: #1f2a44;
+  --color-light-gray: #f4f8fd;
   
   /* Primary Colors */
-  --primary: #4169E1;
+  --primary: #1756c6;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #4169E1;
+  --sidebar-primary: #1756c6;
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: #D4AF37;
-  --chart-2: #4A90E2;
-  --chart-3: #4169E1;
-  --chart-4: #E63946;
-  --chart-5: #F8B4D4;
+  --chart-1: #d8b25b;
+  --chart-2: #dfefff;
+  --chart-3: #1756c6;
+  --chart-4: #e52d4f;
+  --chart-5: #f2a9c1;
   --radius: 0.65rem;
   --background: #FFFFFF;
   --foreground: #1A1A1A;
@@ -73,19 +80,19 @@
   --secondary-foreground: #1A1A1A;
   --muted: #E5E5E5;
   --muted-foreground: #666666;
-  --accent: #D4AF37;
+  --accent: #d8b25b;
   --accent-foreground: #1A1A1A;
-  --destructive: #E63946;
+  --destructive: #e52d4f;
   --destructive-foreground: #FFFFFF;
   --border: #E5E5E5;
   --input: #F5F5F5;
-  --ring: #4169E1;
+  --ring: #1756c6;
   --sidebar: #FFFFFF;
   --sidebar-foreground: #1A1A1A;
-  --sidebar-accent: #D4AF37;
+  --sidebar-accent: #d8b25b;
   --sidebar-accent-foreground: #1A1A1A;
   --sidebar-border: #E5E5E5;
-  --sidebar-ring: #4169E1;
+  --sidebar-ring: #1756c6;
 }
 
 .dark {
@@ -137,15 +144,15 @@
   }
   h1 {
     @apply text-5xl;
-    color: #4169E1;
+    color: #123a82;
   }
   h2 {
     @apply text-4xl;
-    color: #4169E1;
+    color: #123a82;
   }
   h3 {
     @apply text-2xl;
-    color: #4169E1;
+    color: #123a82;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

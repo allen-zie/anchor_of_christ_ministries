@@ -134,51 +134,52 @@ export default function Home() {
       </section>
 
       {/* Ministry Pillars */}
-      <section ref={statsRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Pillar 1 */}
-            <div className="stat-card p-6 bg-gradient-to-br from-deep-blue to-blue-700 rounded-lg shadow-lg text-white text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                  <Heart className="w-8 h-8" fill="currentColor" />
-                </div>
-              </div>
-              <h3 className="text-lg font-bold mb-2">WINNING SOULS</h3>
-              <p className="text-sm text-gray-200">Reaching the lost with the Gospel</p>
-            </div>
+      <section ref={statsRef} className="relative overflow-hidden bg-[#f4f8fd] px-4 py-20 sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-[#d8b25b]">Our foundation</p>
+            <h2 className="text-3xl font-bold text-[#123a82] sm:text-4xl">Ministry Pillars</h2>
+            <div className="mx-auto mt-4 h-1 w-14 rounded-full bg-[#d8b25b]" />
+          </div>
 
-            {/* Pillar 2 */}
-            <div className="stat-card p-6 bg-gradient-to-br from-red-500 to-red-600 rounded-lg shadow-lg text-white text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                  <Users className="w-8 h-8" />
+          <div className="stat-card overflow-hidden rounded-[2rem] border border-white/90 bg-white/80 shadow-[0_24px_70px_rgba(18,58,130,0.14)] backdrop-blur-xl">
+            <div className="grid grid-cols-1 divide-y divide-[#dbe5f2] sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+              <div className="group px-6 py-9 text-center transition-transform duration-300 hover:-translate-y-1 lg:px-8">
+                <div className="mx-auto mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_12px_24px_rgba(23,86,198,0.3)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                  <Heart className="h-8 w-8" fill="currentColor" aria-hidden="true" />
                 </div>
+                <h3 className="mb-2 text-base font-bold uppercase tracking-[0.08em] text-[#123a82]">Winning Souls</h3>
+                <p className="text-sm leading-6 text-[#5c6d86]">Reaching the lost with the Gospel</p>
+                <div className="mx-auto mt-5 h-1 w-8 rounded-full bg-[#d8b25b]" />
               </div>
-              <h3 className="text-lg font-bold mb-2">BUILDING BELIEVERS</h3>
-              <p className="text-sm text-gray-100">Equipping saints for spiritual growth</p>
-            </div>
 
-            {/* Pillar 3 */}
-            <div className="stat-card p-6 bg-gradient-to-br from-gold to-yellow-600 rounded-lg shadow-lg text-white text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                  <Globe className="w-8 h-8" />
+              <div className="group px-6 py-9 text-center transition-transform duration-300 hover:-translate-y-1 lg:px-8">
+                <div className="mx-auto mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_12px_24px_rgba(23,86,198,0.3)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                  <Users className="h-8 w-8" aria-hidden="true" />
                 </div>
+                <h3 className="mb-2 text-base font-bold uppercase tracking-[0.08em] text-[#123a82]">Building Believers</h3>
+                <p className="text-sm leading-6 text-[#5c6d86]">Equipping saints for spiritual growth</p>
+                <div className="mx-auto mt-5 h-1 w-8 rounded-full bg-[#e52d4f]" />
               </div>
-              <h3 className="text-lg font-bold mb-2">IMPACTING NATIONS</h3>
-              <p className="text-sm text-gray-100">Taking the love of Christ to the world</p>
-            </div>
 
-            {/* Pillar 4 */}
-            <div className="stat-card p-6 bg-gradient-to-br from-pink-400 to-pink-500 rounded-lg shadow-lg text-white text-center">
-              <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                  <Hand className="w-8 h-8" />
+              <div className="group px-6 py-9 text-center transition-transform duration-300 hover:-translate-y-1 lg:px-8">
+                <div className="mx-auto mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_12px_24px_rgba(23,86,198,0.3)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                  <Globe className="h-8 w-8" aria-hidden="true" />
                 </div>
+                <h3 className="mb-2 text-base font-bold uppercase tracking-[0.08em] text-[#123a82]">Impacting Nations</h3>
+                <p className="text-sm leading-6 text-[#5c6d86]">Taking the love of Christ to the world</p>
+                <div className="mx-auto mt-5 h-1 w-8 rounded-full bg-[#d8b25b]" />
               </div>
-              <h3 className="text-lg font-bold mb-2">SERVING WITH LOVE</h3>
-              <p className="text-sm text-gray-100">Demonstrating Christ's love in action</p>
+
+              <div className="group px-6 py-9 text-center transition-transform duration-300 hover:-translate-y-1 lg:px-8">
+                <div className="mx-auto mb-5 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_12px_24px_rgba(23,86,198,0.3)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
+                  <Hand className="h-8 w-8" aria-hidden="true" />
+                </div>
+                <h3 className="mb-2 text-base font-bold uppercase tracking-[0.08em] text-[#123a82]">Serving With Love</h3>
+                <p className="text-sm leading-6 text-[#5c6d86]">Demonstrating Christ's love in action</p>
+                <div className="mx-auto mt-5 h-1 w-8 rounded-full bg-[#f2a9c1]" />
+              </div>
             </div>
           </div>
         </div>
