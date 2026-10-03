@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-gold">About AOCIM</h3>
+            <h3 className="text-lg font-bold mb-4 text-gold">About TAOCIM</h3>
             <p className="text-sm text-gray-300">
-              Anchor of Christ International Ministries is committed to winning souls, building believers, and impacting nations through the Gospel.
+              The Anchor of Christ International Ministries is committed to winning souls, building believers, and impacting nations through the Gospel.
             </p>
           </div>
 
@@ -40,10 +40,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-gold">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-deep-blue hover:text-gold transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-deep-blue hover:text-gold transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-deep-blue hover:text-gold transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="text-deep-blue hover:text-gold transition-colors"><Youtube size={20} /></a>
+              <a href="#" className="text-white hover:text-gold transition-colors"><Facebook size={20} /></a>
+              <a href="#" className="text-white hover:text-gold transition-colors"><Youtube size={20} /></a>
+              {/*<a href="#" className="text-white hover:text-gold transition-colors"><Whatsapp size={20} /></a>*/}
+              <a href="#" className="text-white hover:text-gold transition-colors"><Twitter size={20} /></a>
+              <a href="#" className="text-white hover:text-gold transition-colors"><Instagram size={20} /></a> 
             </div>
           </div>
         </div>

@@ -153,27 +153,28 @@ export default function Contact() {
               <div className="fade-in p-8 bg-white rounded-2xl shadow-lg border border-gray-100">
                 <div className="text-sm font-semibold text-gray-500 uppercase mb-4">Visit Us</div>
                 <h3 className="text-2xl font-bold text-deep-blue mb-6">
-                  Anchor of Christ<br />
+                  The Anchor of Christ<br />
                   International Ministries
                 </h3>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
                     <p className="text-gray-700">
-                      123 Anchor Road, Nkulumane,<br />
+                      18759 Andrea Dr, Romney Park<br />
                       Bulawayo, Zimbabwe
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
                     <div className="text-gray-700">
-                      <p className="font-semibold">Sunday Services: 09:00 AM</p>
-                      <p>Wednesday Bible Study: 06:00 PM</p>
+                      <p className="font-semibold">Sunday Services: 09:00 hrs - 15:00 hrs</p>
+                      <p>Wednesday Lunch-time Prayers: 13:00 hrs - 14:00 hrs</p>
+                      <p>Friday Lunch-time Prayers: 13:00 hrs - 14:00 hrs</p>
                     </div>
                   </div>
                 </div>
                 <a 
-                  href="https://www.google.com/maps/search/123+Anchor+Road,+Nkulumane,+Bulawayo,+Zimbabwe" 
+                  href="https://maps.app.goo.gl/mMyeeke8ZWYJvqa66" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-full px-6 py-3 bg-deep-blue text-white font-bold rounded-full hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
@@ -320,21 +321,21 @@ export default function Contact() {
             <div className="fade-in overflow-hidden rounded-[1.75rem] border border-white/90 bg-white/80 shadow-[0_22px_55px_rgba(18,58,130,0.14)] backdrop-blur-xl">
               <div className="grid grid-cols-2 divide-x divide-y divide-[#dbe5f2] lg:grid-cols-4 lg:divide-y-0">
                 <a
-                  href="mailto:info@aocim.org"
-                  aria-label="Email Anchor of Christ International Ministries"
+                  href="mailto:info@anchorofchrist.org"
+                  aria-label="Email The Anchor of Christ International Ministries"
                   className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
                 >
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
                     <Mail className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Email Us</p>
-                  <p className="mt-2 break-words text-[0.7rem] leading-5 text-[#5c6d86]">info@aocim.org</p>
+                  <p className="mt-2 break-words text-[0.7rem] leading-5 text-[#5c6d86]">info@anchorofchrist.org</p>
                   <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#d8b25b]" />
                 </a>
 
                 <a
                   href="tel:+263771234567"
-                  aria-label="Call Anchor of Christ International Ministries"
+                  aria-label="Call The Anchor of Christ International Ministries"
                   className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
                 >
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
@@ -346,17 +347,17 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://www.aocim.org"
+                  href="https://www.anchorofchrist.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Visit the Anchor of Christ International Ministries website"
+                  aria-label="Visit The Anchor of Christ International Ministries website"
                   className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
                 >
                   <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#1756c6] text-white shadow-[0_10px_22px_rgba(23,86,198,0.28)] ring-8 ring-[#1756c6]/10 transition-transform duration-300 group-hover:scale-105">
                     <Globe className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Website</p>
-                  <p className="mt-2 break-words text-[0.7rem] leading-5 text-[#5c6d86]">www.aocim.org</p>
+                  <p className="mt-2 break-words text-[0.7rem] leading-5 text-[#5c6d86]">www.anchorofchrist.org</p>
                   <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#d8b25b]" />
                 </a>
 
@@ -383,7 +384,7 @@ export default function Contact() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.0989891234567!2d28.5833!3d20.1500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1940c5e5e5e5e5e5%3A0x1234567890abcdef!2s123%20Anchor%20Road%2C%20Nkulumane%2C%20Bulawayo%2C%20Zimbabwe!5e0!3m2!1sen!2szw!4v1234567890"
+              src="https://www.google.com/maps/place/The+Anchor+of+Christ+International+Ministries/@-20.1260029,28.6077585,432m/data=!3m1!1e3!4m6!3m5!1s0x1eb5552352fd47bd:0x2e04e9aef29ef859!8m2!3d-20.1255097!4d28.6070415!16s%2Fg%2F11mw7nv3f9?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="100%"
               style={{ border: 0 }}

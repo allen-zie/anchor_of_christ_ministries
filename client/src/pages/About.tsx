@@ -114,7 +114,7 @@ export default function About() {
             </h1>
 
             <p className="hero-animate text-lg text-gray-700 leading-relaxed">
-              Since 2012, Anchor of Christ International Ministries has been reaching souls, building believers, and impacting nations with the love of Christ.
+              Since 2012, The Anchor of Christ International Ministries has been reaching souls, building believers, and impacting nations with the love of Christ.
             </p>
           </div>
 
@@ -237,7 +237,7 @@ export default function About() {
               <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-deep-blue">
                 <h3 className="text-xl font-bold text-deep-blue mb-2">The Beginning of Our Journey in Faith</h3>
                 <p className="text-gray-700">
-                  Anchor of Christ International Ministries was founded with a vision to reach souls and build believers. What started as a small group of faithful believers has become a beacon of hope.
+                  The Anchor of Christ International Ministries was founded with a vision to reach souls and build believers. What started as a small group of faithful believers has become a beacon of hope.
                 </p>
               </div>
             </div>

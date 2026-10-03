@@ -27,8 +27,7 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-sm font-bold text-deep-blue leading-tight">
-                  ANCHOR OF CHRIST
-                </h1>
+                  THE ANCHOR OF CHRIST                 </h1>
                 <p className="text-xs text-gold">INTERNATIONAL MINISTRIES</p>
               </div>
             </div>

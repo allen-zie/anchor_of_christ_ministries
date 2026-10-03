@@ -42,7 +42,7 @@ export default function Giving() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl lg:text-6xl font-bold text-deep-blue mb-6">
-            Support Our Ministry
+            Support The Ministry
           </h1>
           <p className="text-xl text-gray-600">
             Your generosity enables us to reach more souls, build believers, and impact nations

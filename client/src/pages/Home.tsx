@@ -101,7 +101,7 @@ export default function Home() {
           {/* Left Content */}
           <div className="space-y-6">
             <div className="inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full">
-              <p className="text-sm font-semibold text-gold uppercase">Welcome to AOCIM</p>
+              <p className="text-sm font-semibold text-gold uppercase">Welcome to TAOCIM</p>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-deep-blue leading-tight">
@@ -206,15 +206,15 @@ export default function Home() {
             <p className="text-sm text-gray-600 mt-2">Souls Reached</p>
           </div>
           <div>
-            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">120+</p>
+            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">50+</p>
             <p className="text-sm text-gray-600 mt-2">Church Partners</p>
           </div>
           <div>
-            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">50+</p>
+            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">20+</p>
             <p className="text-sm text-gray-600 mt-2">Countries Reached</p>
           </div>
           <div>
-            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">15+</p>
+            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">12+</p>
             <p className="text-sm text-gray-600 mt-2">Years of Ministry</p>
           </div>
         </div>

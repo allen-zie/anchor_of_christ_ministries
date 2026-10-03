@@ -209,7 +209,7 @@ export default function Ministries() {
           </h1>
 
           <p className="hero-animate text-lg text-gray-700 leading-relaxed max-w-3xl">
-            At Anchor of Christ, we serve every generation with purpose and love. Explore the different ministries making an eternal impact.
+            At The Anchor of Christ, we serve every generation with purpose and love. Explore the different ministries making an eternal impact.
           </p>
         </div>
       </section>
