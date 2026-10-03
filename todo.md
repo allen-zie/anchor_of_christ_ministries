@@ -1,6 +1,8 @@
-# Contact page two-column update
+# Media gallery and sermon uploads
 
-- [ ] Inspect current Contact page section boundaries
-- [ ] Move contact methods below the two-column content layout
-- [ ] Verify desktop and mobile Contact layouts and build
-- [ ] Save the completed Contact layout update
+- [ ] Inspect current Media and Sermons pages and project capabilities
+- [ ] Define persistent gallery and sermon upload data model
+- [ ] Add image gallery section with upload-ready UI
+- [ ] Add video, audio, and Word sermon upload-ready UI
+- [ ] Verify types, build, and responsive layouts
+- [ ] Save the completed media and sermon upload update

@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import MediaUploadPanel from '@/components/MediaUploadPanel';
 import { Play, Tv, BookOpen, Users } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -155,6 +156,18 @@ export default function Media() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <MediaUploadPanel
+            kind="gallery"
+            title="Ministry Gallery"
+            description="Browse moments from worship, outreach, events, and life at Anchor of Christ International Ministries."
+            accent="bg-gold/15 text-[#8f6a12]"
+            accept="image/jpeg,image/png,image/webp,image/gif"
+          />
         </div>
       </section>
 
