@@ -386,7 +386,7 @@ export default function Contact() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7492.378290497902!2d28.605678106904932!3d-20.12615513153107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb5552352fd47bd%3A0x2e04e9aef29ef859!2sThe%20Anchor%20of%20Christ%20International%20Ministries!5e0!3m2!1sen!2szw!4v1791467519300!5m2!1sen!2szw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+              src="https://www.google.com/maps/place/The+Anchor+of+Christ+International+Ministries/@-20.1260029,28.6077585,432m/data=!3m1!1e3!4m6!3m5!1s0x1eb5552352fd47bd:0x2e04e9aef29ef859!8m2!3d-20.1255097!4d28.6070415!16s%2Fg%2F11mw7nv3f9?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
               width="100%"
               height="100%"
               style={{ border: 0 }}

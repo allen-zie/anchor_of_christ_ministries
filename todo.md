@@ -1,9 +1,8 @@
-# Media gallery and sermon uploads
+# GitHub sync and media/sermon feature rollback
 
-- [x] Inspect current Media and Sermons pages and project capabilities
-- [x] Define persistent gallery and sermon upload data model
-- [x] Add image gallery section with upload-ready UI
-- [x] Add video, audio, and Word sermon upload-ready UI
-- [x] Verify Sermon Library upload and library layout on mobile
-- [x] Verify types, build, and responsive layouts
-- [x] Save the completed media and sermon upload update
+- [x] Inspect local and GitHub branch state before syncing
+- [x] Preserve and integrate the latest GitHub changes
+- [x] Remove the gallery and multi-format sermon upload feature
+- [x] Remove only feature-specific backend, schema, and dependency changes
+- [x] Run type checks and production build
+- [x] Push the cleaned project to GitHub and verify remote state
