@@ -1,8 +1,9 @@
-# About page Core Values and Church Colours
+# About page 3D animations
 
-- [x] Inspect the existing Core Values section and Ministry Foundations placement
-- [x] Replace the four placeholder values with all 12 supplied Core Values
-- [x] Add a Church Colours section beneath Ministry Foundations with the supplied meanings
-- [x] Preserve the existing faith section order and visual palette
-- [x] Verify responsive layout, accessibility, and build checks
-- [x] Save the verified About page update
+- [x] Inspect current About page animation hooks and global motion preferences
+- [x] Add GSAP ScrollTrigger depth reveals for the new Ministry Foundations, Church Colours, Faith, and Core Values sections
+- [x] Add lightweight 3D hover tilt/lift to cards and colour swatches
+- [x] Add dimensional motion to the YouTube hero panel
+- [x] Respect reduced-motion preferences and preserve mobile usability
+- [x] Verify TypeScript, build, and desktop/mobile visual behavior
+- [x] Save the verified 3D animation update

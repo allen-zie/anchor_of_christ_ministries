@@ -31,12 +31,56 @@ const churchColors = [
 ] as const;
 
 export default function About() {
+  const aboutRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const root = aboutRef.current;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const cleanupTilt: Array<() => void> = [];
+
+    if (root && !reducedMotion) {
+      root.querySelectorAll<HTMLElement>('[data-3d-section]').forEach((section) => {
+        gsap.fromTo(
+          section.querySelectorAll<HTMLElement>('[data-3d-item]'),
+          { opacity: 0, y: 42, z: -70, rotateX: -7 },
+          {
+            opacity: 1,
+            y: 0,
+            z: 0,
+            rotateX: 0,
+            duration: 0.85,
+            stagger: 0.08,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 82%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
+
+      root.querySelectorAll<HTMLElement>('[data-tilt]').forEach((card) => {
+        const handleMove = (event: PointerEvent) => {
+          const bounds = card.getBoundingClientRect();
+          const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+          const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+          gsap.to(card, { rotateX: y * -7, rotateY: x * 9, z: 18, duration: 0.35, ease: 'power2.out', transformPerspective: 1000, overwrite: true });
+        };
+        const handleLeave = () => gsap.to(card, { rotateX: 0, rotateY: 0, z: 0, duration: 0.45, ease: 'power3.out', overwrite: true });
+        card.addEventListener('pointermove', handleMove);
+        card.addEventListener('pointerleave', handleLeave);
+        cleanupTilt.push(() => {
+          card.removeEventListener('pointermove', handleMove);
+          card.removeEventListener('pointerleave', handleLeave);
+        });
+      });
+    }
+
     // Hero animations
     if (heroRef.current) {
       const elements = heroRef.current.querySelectorAll('.hero-animate');
@@ -111,12 +155,13 @@ export default function About() {
     }
 
     return () => {
+      cleanupTilt.forEach((cleanup) => cleanup());
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div ref={aboutRef} className="min-h-screen bg-white [perspective:1400px]">
       <Navbar />
 
       {/* Hero Section */}
@@ -143,7 +188,8 @@ export default function About() {
 
           {/* Right - YouTube Video */}
           <a
-            className="hero-animate group relative block aspect-video overflow-hidden rounded-3xl bg-gradient-to-br from-deep-blue via-blue-800 to-blue-950 shadow-2xl"
+            data-tilt
+            className="hero-animate group relative block aspect-video transform-gpu overflow-hidden rounded-3xl bg-gradient-to-br from-deep-blue via-blue-800 to-blue-950 shadow-2xl [transform-style:preserve-3d]"
             href="https://www.youtube.com/@taocim_TV7/videos"
             target="_blank"
             rel="noopener noreferrer"
@@ -166,7 +212,7 @@ export default function About() {
       </section>
 
       {/* Ministry Information Cards */}
-      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section data-3d-section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Who we are</p>
@@ -175,21 +221,21 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-            <div className="p-6 rounded-2xl border border-gray-100 bg-white shadow-lg">
+            <div data-3d-item data-tilt className="transform-gpu p-6 rounded-2xl border border-gray-100 bg-white shadow-lg [transform-style:preserve-3d]">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><BookOpen className="w-6 h-6 text-gold" aria-hidden="true" /></div>
                 <div><h3 className="mb-2 font-bold text-deep-blue">OUR HISTORY</h3><p className="text-sm leading-6 text-gray-700">What began in faith and prayer in 2012 has grown into an international ministry touching lives across nations. We have remained rooted in God&apos;s Word, trusting His guidance every step of the way.</p></div>
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-gray-100 bg-white shadow-lg">
+            <div data-3d-item data-tilt className="transform-gpu p-6 rounded-2xl border border-gray-100 bg-white shadow-lg [transform-style:preserve-3d]">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><Anchor className="w-6 h-6 text-gold" aria-hidden="true" /></div>
                 <div><h3 className="mb-2 font-bold text-deep-blue">OUR VISION</h3><p className="text-sm leading-6 text-gray-700">To serve Christ, touch lives, win souls to Jesus, and bring transformation to communities in Bulawayo and the world.</p><p className="mt-3 text-sm leading-6 text-gray-700">The fruit of the righteous is a tree of life, and whoever captures souls is wise. ~ Proverbs 11:30</p></div>
               </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-gray-100 bg-white shadow-lg">
+            <div data-3d-item data-tilt className="transform-gpu p-6 rounded-2xl border border-gray-100 bg-white shadow-lg [transform-style:preserve-3d]">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><Target className="w-6 h-6 text-gold" aria-hidden="true" /></div>
                 <div><h3 className="mb-2 font-bold text-deep-blue">OUR MISSION STATEMENT</h3><ol className="space-y-2 text-sm leading-6 text-gray-700"><li>1. To honour Jesus Christ, the living Word.</li><li>2. To make a positive impact on lives and lead people to a personal relationship with Jesus Christ with love, hope, and prayer.</li><li>3. To reach nations through preaching God&apos;s revelations, setting people free, and touching lives through giving.</li></ol></div>
@@ -200,7 +246,7 @@ export default function About() {
       </section>
 
       {/* Church Colours */}
-      <section className="bg-light-gray px-4 py-16 sm:px-6 lg:px-8">
+      <section data-3d-section className="bg-light-gray px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Our visual identity</p>
@@ -210,8 +256,8 @@ export default function About() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {churchColors.map(([name, meaning, swatch, textColor]) => (
-              <div key={name} className="rounded-2xl bg-white p-5 text-center shadow-md">
-                <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-sm font-bold shadow-lg ${swatch} ${textColor}`} aria-label={`${name} church colour`}>
+              <div data-3d-item data-tilt key={name} className="transform-gpu rounded-2xl bg-white p-5 text-center shadow-md [transform-style:preserve-3d]">
+                <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-sm font-bold shadow-lg transition-transform duration-300 hover:scale-110 ${swatch} ${textColor}`} aria-label={`${name} church colour`}>
                   {name.slice(0, 1)}
                 </div>
                 <h3 className="text-lg font-bold text-deep-blue">{name}</h3>
@@ -223,14 +269,14 @@ export default function About() {
       </section>
 
       {/* Statement and Prayer of Faith */}
-      <section className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
+      <section data-3d-section className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
-          <article className="rounded-3xl border border-gold/30 bg-white p-8 shadow-lg sm:p-10">
+          <article data-3d-item data-tilt className="transform-gpu rounded-3xl border border-gold/30 bg-white p-8 shadow-lg [transform-style:preserve-3d] sm:p-10">
             <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Anchor className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold text-deep-blue">Statement of Faith</h2></div>
             <div className="space-y-4 text-gray-700 leading-7"><p>Our church logo represents our statement of faith.</p><p>If you look at our church logo, there is a boat and an anchor.</p><p>We are anchored in Christ Jesus. The Angel of God said, we are in this unstable, turbulent world (the boat) but it is balance by the Anchor (Jesus Christ).</p><p>We are a prophetic, healing and deliverance ministry which believe that Jesus Christ is the Son of Christ and that he was crucified, died and was buried. On the third day He rose and later ascended to heaven where He remains at the right hand of the Father (the almighty God).</p><p>We believe in the Trinity (God the Father, Jesus Christ and the Holy Spirit) and the Fivefold ministries.</p></div>
           </article>
 
-          <article className="rounded-3xl border border-deep-blue/20 bg-deep-blue p-8 text-white shadow-lg sm:p-10">
+          <article data-3d-item data-tilt className="transform-gpu rounded-3xl border border-deep-blue/20 bg-deep-blue p-8 text-white shadow-lg [transform-style:preserve-3d] sm:p-10">
             <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Heart className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold text-gold">The Prayer of Faith</h2></div>
             <blockquote className="border-l-4 border-gold pl-5 text-lg leading-8 text-blue-50"><p>Is anyone among you suffering? Let him Pray.</p><p>Is anyone cheerful? Let him sing Praise.</p><p>Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord.</p><p>And the prayer of faith will save the one who is sick, and the Lord will raise him up.</p><p>And if he has committed sins, he will be forgiven.</p><footer className="mt-5 font-bold not-italic text-gold">James 5: 13 – 15</footer></blockquote>
           </article>
@@ -238,7 +284,7 @@ export default function About() {
       </section>
 
       {/* Content Section - Core Values */}
-      <section ref={contentRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <section ref={contentRef} data-3d-section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-deep-blue mb-4">Our Core Values</h2>
@@ -247,7 +293,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {coreValues.map(([title, description, iconColor, cardGradient, borderColor]) => (
-              <div key={title} className={`fade-in rounded-2xl border p-7 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg bg-gradient-to-br ${cardGradient} ${borderColor}`}>
+              <div data-3d-item data-tilt key={title} className={`transform-gpu rounded-2xl border p-7 shadow-sm transition-shadow duration-300 hover:shadow-lg [transform-style:preserve-3d] bg-gradient-to-br ${cardGradient} ${borderColor}`}>
                 <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full ${iconColor}`}>
                   <Heart className="h-6 w-6 text-white" aria-hidden="true" />
                 </div>
