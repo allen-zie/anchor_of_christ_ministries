@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import MediaUploadPanel from '@/components/MediaUploadPanel';
 import { Play, Calendar, User } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -134,7 +133,7 @@ export default function Sermons() {
       {/* Podcast Subscribe */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-deep-blue to-blue-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white">Subscribe to Our Podcast</h2>
+          <h2 className="text-3xl font-bold mb-4">Subscribe to Our Podcast</h2>
           <p className="text-lg mb-8">
             Never miss a sermon. Subscribe to our podcast on your favorite platform and get new messages delivered to you.
           </p>
@@ -149,18 +148,6 @@ export default function Sermons() {
               Google Podcasts
             </button>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <MediaUploadPanel
-            kind="sermon"
-            title="Sermon Library"
-            description="Upload and publish video sermons, audio sermons, and Word sermon notes from one ministry library."
-            accent="bg-deep-blue/10 text-deep-blue"
-            accept="video/mp4,video/webm,audio/mpeg,audio/wav,audio/mp4,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-          />
         </div>
       </section>
 

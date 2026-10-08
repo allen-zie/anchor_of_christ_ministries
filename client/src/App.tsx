@@ -21,8 +21,8 @@ import YouthMinistry from "./pages/YouthMinistry";
 import ChildrensMinistry from "./pages/ChildrensMinistry";
 import AnnaGroup from "./pages/AnnaGroup";
 
+
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />

@@ -197,7 +197,13 @@ export default function Ministries() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white"
+        className="pt-55 pb-35 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white"
+        style={{
+          // backgroundImage: `url("${location}")`,
+          backgroundImage: `url("https://thumbs.dreamstime.com/b/old-scroll-paper-background-old-scroll-paper-background-361158206.jpg?w=992")`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="max-w-7xl mx-auto">
           <div className="hero-animate inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full mb-6">

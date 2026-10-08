@@ -142,7 +142,10 @@ export default function About() {
                 <div>
                   <h3 className="font-bold text-deep-blue mb-2">OUR VISION</h3>
                   <p className="text-sm text-gray-700">
-                    To see lives anchored in Christ, transformed by His love, and equipped to impact nations for His Kingdom.
+                    To serve Christ, touch lives, win soul to Jesus and bring transformation to communities in Bulawayo and the world.
+                  </p>
+                  <p className="text-sm text-gray-700">  
+                   The fruit of the righteous is a tree of life, and whoever captures souls is wise. ~ Proverbs 11:30
                   </p>
                 </div>
               </div>
@@ -156,7 +159,11 @@ export default function About() {
                 <div>
                   <h3 className="font-bold text-deep-blue mb-2">OUR MISSION STATEMENT</h3>
                   <p className="text-sm text-gray-700">
-                    To win souls, build believers, and equip leaders who will advance God's Kingdom. We do this through the Gospel, discipleship, prayer, and practical outreach that meets both spiritual and physical needs.
+                    <ol>
+                      <li>1. To honour Jesus Christ, the living word.</li>
+                      <li>2. To make a positive impact on lives and lead people to a personal relationship with Jesus Christ with love, hope and prayer.</li>
+                      <li>3. To reach out to nations through preaching speaking God’s revelations, setting people free and touching lives through giving.</li>
+                    </ol>
                   </p>
                 </div>
               </div>
@@ -301,7 +308,7 @@ export default function About() {
               <div className="w-80 h-96 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20">
                 <div className="text-center">
                   <div className="text-6xl mb-4">👨‍🙏</div>
-                  <p className="text-white font-semibold">Prophet & Leader</p>
+                  <p className="text-white font-semibold">Prophet Dr D. Chauke</p>
                 </div>
               </div>
             </div>
@@ -310,15 +317,15 @@ export default function About() {
             <div className="space-y-6">
               <div>
                 <p className="text-gold font-semibold uppercase mb-2">Leadership</p>
-                <h2 className="text-4xl font-bold mb-4">Meet Our Prophet & Leader</h2>
+                <h2 className="text-4xl font-bold mb-4">Meet Prophet Dr D. Chauke</h2>
               </div>
 
               <p className="text-lg text-gray-100 leading-relaxed">
-                Our Prophet and Leader is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for reaching the lost.
+                Prophet Dr D. Chauke is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for savouring Christ and bringing souls to Jesus.
               </p>
 
               <p className="text-lg text-gray-100 leading-relaxed">
-                Under his spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across 50+ countries. His teachings emphasize the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
+                Under God's guidance and spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across multiple countries. With teachings emphasising the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
               </p>
 
               <div className="space-y-4 pt-4">
@@ -369,7 +376,7 @@ export default function About() {
               </div>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                One of our first acts of love was building a house for Gogo Mkhobela. This act of kindness reflects our heart to serve both spiritually and physically, demonstrating Christ's love in action.
+                One of our first acts of love was building a house for Gogo Ndebele. This act of kindness reflects our heart to serve both spiritually and physically, demonstrating Christ's love in action.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
