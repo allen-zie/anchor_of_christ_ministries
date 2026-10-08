@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'wouter';
 import { Menu, X } from 'lucide-react';
+import logo from '@/content/images/anchor_logo.webp'
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +25,13 @@ export default function Navbar() {
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer">
               <div className="w-12 h-12 bg-gradient-to-br from-gold to-yellow-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">⚓</span>
+                <span className="text-white font-bold text-lg">
+                  <img
+                    src={logo}
+                    alt="TAOCIM LOGO"
+                    className="Logo"
+                  />
+                </span>
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-sm font-bold text-deep-blue leading-tight">

@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Mail, Phone, Globe, Clock, MapPin, Send, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
+//import location from '@/content/images/location1.webp'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,10 +101,11 @@ export default function Contact() {
       {/* Hero Section with Map Background */}
       <section
         ref={heroRef}
-        className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        className="pt-32 pb-87 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
         style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22%3E%3Cdefs%3E%3ClinearGradient id=%22grad%22 x1=%220%25%22 y1=%220%25%22 x2=%22100%25%22 y2=%22100%25%22%3E%3Cstop offset=%220%25%22 style=%22stop-color:%23e8f1f8;stop-opacity:1%22 /%3E%3Cstop offset=%22100%25%22 style=%22stop-color:%23d0e8f2;stop-opacity:1%22 /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%221200%22 height=%22600%22 fill=%22url(%23grad)%22/%3E%3C/svg%3E")',
-          backgroundSize: 'cover',
+          // backgroundImage: `url("${location}")`,
+          backgroundImage: `url("https://images.unsplash.com/photo-1715706107718-4a0cc4f0335c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+          backgroundSize: '90% 90%',
           backgroundPosition: 'center',
         }}
       >
@@ -191,13 +193,13 @@ export default function Contact() {
                   Follow our journey and stay updated on our mission.
                 </p>
                 <div className="flex gap-4">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
+                  <a href="https://www.facebook.com/profile.php?id=61573850645463" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Facebook size={20} />
                   </a>
                   <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Instagram size={20} />
                   </a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
+                  <a href="https://www.youtube.com/@taocim_TV7" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
                     <Youtube size={20} />
                   </a>
                   <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-deep-blue text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all transform hover:scale-110">
@@ -384,7 +386,7 @@ export default function Contact() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-[500px]">
             <iframe
-              src="https://www.google.com/maps/place/The+Anchor+of+Christ+International+Ministries/@-20.1260029,28.6077585,432m/data=!3m1!1e3!4m6!3m5!1s0x1eb5552352fd47bd:0x2e04e9aef29ef859!8m2!3d-20.1255097!4d28.6070415!16s%2Fg%2F11mw7nv3f9?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7492.378290497902!2d28.605678106904932!3d-20.12615513153107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb5552352fd47bd%3A0x2e04e9aef29ef859!2sThe%20Anchor%20of%20Christ%20International%20Ministries!5e0!3m2!1sen!2szw!4v1791467519300!5m2!1sen!2szw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
