@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import logo from '@/content/images/anchor_logo.webp'
 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [location] = useLocation();
   const scrollToPageTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  const currentPath = location.split('?')[0].split('#')[0] || '/';
 
   const navItems = [
     { label: 'HOME', href: '/' },
@@ -46,7 +48,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
                   <Link key={item.href} href={item.href}>
-                    <a onClick={scrollToPageTop} className="text-sm font-semibold text-deep-blue hover:text-gold transition-colors duration-200">
+                    <a onClick={scrollToPageTop} className={`text-sm font-semibold transition-colors duration-200 ${currentPath === item.href ? 'border-b-2 border-gold pb-2 text-gold' : 'text-deep-blue hover:text-gold'}`} aria-current={currentPath === item.href ? 'page' : undefined}>
                   {item.label}
                 </a>
               </Link>
@@ -76,7 +78,8 @@ export default function Navbar() {
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
                   <a
-                    className="block px-4 py-2 text-sm font-semibold text-deep-blue hover:bg-gold hover:text-white transition-colors rounded"
+                    className={`block rounded px-4 py-2 text-sm font-semibold transition-colors ${currentPath === item.href ? 'bg-gold/15 text-gold' : 'text-deep-blue hover:bg-gold hover:text-white'}`}
+                    aria-current={currentPath === item.href ? 'page' : undefined}
                     onClick={() => { setIsOpen(false); scrollToPageTop(); }}
                   >
                     {item.label}

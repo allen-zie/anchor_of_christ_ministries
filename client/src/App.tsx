@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ArrowUp } from "lucide-react";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -44,30 +45,74 @@ function ScrollRestoration() {
   return null;
 }
 
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
 
-function Router() {
+  useEffect(() => {
+    const handleScroll = () => setIsVisible(window.scrollY > 520);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/about"} component={About} />
-      <Route path={"/the-prophet"} component={TheProphet} />
-      <Route path={"/ministries"} component={Ministries} />
-      <Route path={"/events"} component={Events} />
-      <Route path={"/testimonies"} component={Testimonies} />
-      <Route path={"/media"} component={Media} />
-      <Route path={"/sermons"} component={Sermons} />
-      <Route path={"/live-services"} component={LiveServices} />
-      <Route path={"/giving"} component={Giving} />
-      <Route path={"/contact"} component={Contact} />
-      <Route path={"/men-ministry"} component={MensMinistry} />
-      <Route path={"/women-ministry"} component={WomensMinistry} />
-      <Route path={"/youth-ministry"} component={YouthMinistry} />
-      <Route path={"/children-ministry"} component={ChildrensMinistry} />
-      <Route path={"/anna-group"} component={AnnaGroup} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <button
+      type="button"
+      aria-label="Scroll to top"
+      title="Scroll to top"
+      onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+      className={`fixed bottom-6 right-6 z-[60] flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-gold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-yellow-600 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-gold/40 ${isVisible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"}`}
+    >
+      <ArrowUp className="h-5 w-5" aria-hidden="true" />
+    </button>
+  );
+}
+
+const pageByPath = {
+  "/": Home,
+  "/about": About,
+  "/the-prophet": TheProphet,
+  "/ministries": Ministries,
+  "/events": Events,
+  "/testimonies": Testimonies,
+  "/media": Media,
+  "/sermons": Sermons,
+  "/live-services": LiveServices,
+  "/giving": Giving,
+  "/contact": Contact,
+  "/men-ministry": MensMinistry,
+  "/women-ministry": WomensMinistry,
+  "/youth-ministry": YouthMinistry,
+  "/children-ministry": ChildrensMinistry,
+  "/anna-group": AnnaGroup,
+  "/404": NotFound,
+} as const;
+
+function renderPage(path: string) {
+  const Page = pageByPath[path as keyof typeof pageByPath] ?? NotFound;
+  return <Page />;
+}
+
+function RouteTransition() {
+  const [location] = useLocation();
+  const path = location.split("?")[0].split("#")[0] || "/";
+  const [activePath, setActivePath] = useState(path);
+  const [exitingPath, setExitingPath] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (path === activePath) return;
+
+    setExitingPath(activePath);
+    setActivePath(path);
+    const timer = window.setTimeout(() => setExitingPath(null), 760);
+    return () => window.clearTimeout(timer);
+  }, [path]);
+
+  return (
+    <div className="route-stage">
+      {exitingPath && <div className="route-page route-page-exit">{renderPage(exitingPath)}</div>}
+      <div className="route-page route-page-enter" key={activePath}>{renderPage(activePath)}</div>
+    </div>
   );
 }
 
@@ -86,7 +131,8 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <ScrollRestoration />
-          <Router />
+          <ScrollToTopButton />
+          <RouteTransition />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
