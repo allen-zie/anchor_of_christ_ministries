@@ -2,6 +2,8 @@ import { Link } from 'wouter';
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 export default function Footer() {
+  const scrollToPageTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+
   return (
     <footer className="bg-deep-blue text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,10 +20,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-gold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about"><a className="hover:text-gold transition-colors">About Us</a></Link></li>
-              <li><Link href="/ministries"><a className="hover:text-gold transition-colors">Ministries</a></Link></li>
-              <li><Link href="/events"><a className="hover:text-gold transition-colors">Events</a></Link></li>
-              <li><Link href="/giving"><a className="hover:text-gold transition-colors">Give</a></Link></li>
+              <li><Link href="/about"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">About Us</a></Link></li>
+              <li><Link href="/ministries"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Ministries</a></Link></li>
+              <li><Link href="/events"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Events</a></Link></li>
+              <li><Link href="/giving"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Give</a></Link></li>
             </ul>
           </div>
 
@@ -29,10 +31,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-gold">Resources</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/sermons"><a className="hover:text-gold transition-colors">Sermons</a></Link></li>
-              <li><Link href="/live-services"><a className="hover:text-gold transition-colors">Live Services</a></Link></li>
-              <li><Link href="/testimonies"><a className="hover:text-gold transition-colors">Testimonies</a></Link></li>
-              <li><Link href="/contact"><a className="hover:text-gold transition-colors">Contact</a></Link></li>
+              <li><Link href="/sermons"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Sermons</a></Link></li>
+              <li><Link href="/live-services"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Live Services</a></Link></li>
+              <li><Link href="/testimonies"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Testimonies</a></Link></li>
+              <li><Link href="/contact"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Contact</a></Link></li>
             </ul>
           </div>
 

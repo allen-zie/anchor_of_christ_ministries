@@ -1,7 +1,8 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
@@ -20,6 +21,28 @@ import WomensMinistry from "./pages/WomensMinistry";
 import YouthMinistry from "./pages/YouthMinistry";
 import ChildrensMinistry from "./pages/ChildrensMinistry";
 import AnnaGroup from "./pages/AnnaGroup";
+
+function ScrollRestoration() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    window.history.scrollRestoration = "manual";
+    const hash = window.location.hash;
+
+    if (hash) {
+      window.requestAnimationFrame(() => {
+        document.getElementById(hash.slice(1))?.scrollIntoView({ block: "start" });
+      });
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location]);
+
+  return null;
+}
 
 
 function Router() {
@@ -62,6 +85,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          <ScrollRestoration />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

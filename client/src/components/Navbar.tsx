@@ -6,6 +6,7 @@ import logo from '@/content/images/anchor_logo.webp'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const scrollToPageTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 
   const navItems = [
     { label: 'HOME', href: '/' },
@@ -22,7 +23,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" onClick={scrollToPageTop}>
             <div className="flex items-center gap-3 cursor-pointer">
               <div className="w-12 h-12 bg-gradient-to-br from-gold to-yellow-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">
@@ -44,8 +45,8 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                <a className="text-sm font-semibold text-deep-blue hover:text-gold transition-colors duration-200">
+                  <Link key={item.href} href={item.href}>
+                    <a onClick={scrollToPageTop} className="text-sm font-semibold text-deep-blue hover:text-gold transition-colors duration-200">
                   {item.label}
                 </a>
               </Link>
@@ -76,7 +77,7 @@ export default function Navbar() {
                 <Link key={item.href} href={item.href}>
                   <a
                     className="block px-4 py-2 text-sm font-semibold text-deep-blue hover:bg-gold hover:text-white transition-colors rounded"
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => { setIsOpen(false); scrollToPageTop(); }}
                   >
                     {item.label}
                   </a>

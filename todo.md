@@ -1,9 +1,8 @@
-# About page 3D animations
+# Link scroll reset
 
-- [x] Inspect current About page animation hooks and global motion preferences
-- [x] Add GSAP ScrollTrigger depth reveals for the new Ministry Foundations, Church Colours, Faith, and Core Values sections
-- [x] Add lightweight 3D hover tilt/lift to cards and colour swatches
-- [x] Add dimensional motion to the YouTube hero panel
-- [x] Respect reduced-motion preferences and preserve mobile usability
-- [x] Verify TypeScript, build, and desktop/mobile visual behavior
-- [x] Save the verified 3D animation update
+- [x] Inspect navbar, footer, router, and current scroll restoration behavior
+- [x] Add route-change scroll reset for page navigation
+- [x] Preserve intentional in-page hash/anchor links
+- [x] Verify navbar and footer links on desktop and mobile
+- [x] Run TypeScript and production build checks
+- [x] Save the verified navigation update
