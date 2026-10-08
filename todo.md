@@ -1,8 +1,8 @@
-# GitHub sync and media/sermon feature rollback
+# About page restructuring
 
-- [x] Inspect local and GitHub branch state before syncing
-- [x] Preserve and integrate the latest GitHub changes
-- [x] Remove the gallery and multi-format sermon upload feature
-- [x] Remove only feature-specific backend, schema, and dependency changes
-- [x] Run type checks and production build
-- [x] Push the cleaned project to GitHub and verify remote state
+- [x] Inspect the current About page hero, info cards, and Core Values sections
+- [x] Keep the hero split into two columns and replace the right cards with a YouTube video player/link
+- [x] Move the right-side info cards into a dedicated section below the hero
+- [x] Add Statement of Faith and Prayer of Faith sections above Core Values
+- [x] Verify responsive layout, accessibility, and build checks
+- [x] Save the verified About page update

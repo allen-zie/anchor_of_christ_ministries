@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { BookOpen, Anchor, Target, Heart } from 'lucide-react';
+import { BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,57 +118,76 @@ export default function About() {
             </p>
           </div>
 
-          {/* Right - Info Cards */}
-          <div className="space-y-4">
-            <div className="hero-animate p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+          {/* Right - YouTube Video */}
+          <a
+            className="hero-animate group relative block aspect-video overflow-hidden rounded-3xl bg-gradient-to-br from-deep-blue via-blue-800 to-blue-950 shadow-2xl"
+            href="https://www.youtube.com/@taocim_TV7/videos"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch Anchor of Christ International Ministries on YouTube"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.45),transparent_35%),linear-gradient(135deg,transparent,rgba(0,0,0,0.35))]" />
+            <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full border border-gold/40" />
+            <div className="absolute -bottom-16 -left-8 h-48 w-48 rounded-full border border-white/15" />
+            <div className="relative flex h-full flex-col items-center justify-center px-8 text-center text-white">
+              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-red-600 shadow-lg shadow-red-950/40 transition-transform duration-300 group-hover:scale-110">
+                <Play className="ml-1 h-9 w-9 fill-white text-white" aria-hidden="true" />
+              </div>
+              <Youtube className="mb-3 h-7 w-7 text-gold" aria-hidden="true" />
+              <h2 className="text-2xl font-bold sm:text-3xl">Watch Our Ministry</h2>
+              <p className="mt-2 max-w-sm text-sm leading-6 text-blue-100">Messages, worship, prayer, and ministry moments from Anchor of Christ International Ministries.</p>
+              <span className="mt-5 rounded-full border border-white/30 px-5 py-2 text-sm font-semibold transition-colors group-hover:border-gold group-hover:text-gold">Play on YouTube</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* Ministry Information Cards */}
+      <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Who we are</p>
+            <h2 className="mb-4 text-4xl font-bold text-deep-blue">Our Ministry Foundations</h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-600">The history, vision, and mission that keep our ministry anchored in Christ.</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <div className="p-6 rounded-2xl border border-gray-100 bg-white shadow-lg">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <BookOpen className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-deep-blue mb-2">OUR HISTORY</h3>
-                  <p className="text-sm text-gray-700">
-                    What began in faith and prayer in 2012 has grown into an international ministry touching lives across nations. We have remained rooted in God's Word, trusting His guidance every step of the way.
-                  </p>
-                </div>
+                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><BookOpen className="w-6 h-6 text-gold" aria-hidden="true" /></div>
+                <div><h3 className="mb-2 font-bold text-deep-blue">OUR HISTORY</h3><p className="text-sm leading-6 text-gray-700">What began in faith and prayer in 2012 has grown into an international ministry touching lives across nations. We have remained rooted in God&apos;s Word, trusting His guidance every step of the way.</p></div>
               </div>
             </div>
 
-            <div className="hero-animate p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="p-6 rounded-2xl border border-gray-100 bg-white shadow-lg">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Anchor className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-deep-blue mb-2">OUR VISION</h3>
-                  <p className="text-sm text-gray-700">
-                    To serve Christ, touch lives, win soul to Jesus and bring transformation to communities in Bulawayo and the world.
-                  </p>
-                  <p className="text-sm text-gray-700">  
-                   The fruit of the righteous is a tree of life, and whoever captures souls is wise. ~ Proverbs 11:30
-                  </p>
-                </div>
+                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><Anchor className="w-6 h-6 text-gold" aria-hidden="true" /></div>
+                <div><h3 className="mb-2 font-bold text-deep-blue">OUR VISION</h3><p className="text-sm leading-6 text-gray-700">To serve Christ, touch lives, win souls to Jesus, and bring transformation to communities in Bulawayo and the world.</p><p className="mt-3 text-sm leading-6 text-gray-700">The fruit of the righteous is a tree of life, and whoever captures souls is wise. ~ Proverbs 11:30</p></div>
               </div>
             </div>
 
-            <div className="hero-animate p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+            <div className="p-6 rounded-2xl border border-gray-100 bg-white shadow-lg">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Target className="w-6 h-6 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-deep-blue mb-2">OUR MISSION STATEMENT</h3>
-                  <p className="text-sm text-gray-700">
-                    <ol>
-                      <li>1. To honour Jesus Christ, the living word.</li>
-                      <li>2. To make a positive impact on lives and lead people to a personal relationship with Jesus Christ with love, hope and prayer.</li>
-                      <li>3. To reach out to nations through preaching speaking God’s revelations, setting people free and touching lives through giving.</li>
-                    </ol>
-                  </p>
-                </div>
+                <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><Target className="w-6 h-6 text-gold" aria-hidden="true" /></div>
+                <div><h3 className="mb-2 font-bold text-deep-blue">OUR MISSION STATEMENT</h3><ol className="space-y-2 text-sm leading-6 text-gray-700"><li>1. To honour Jesus Christ, the living Word.</li><li>2. To make a positive impact on lives and lead people to a personal relationship with Jesus Christ with love, hope, and prayer.</li><li>3. To reach nations through preaching God&apos;s revelations, setting people free, and touching lives through giving.</li></ol></div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Statement and Prayer of Faith */}
+      <section className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
+          <article className="rounded-3xl border border-gold/30 bg-white p-8 shadow-lg sm:p-10">
+            <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Anchor className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold text-deep-blue">Statement of Faith</h2></div>
+            <div className="space-y-4 text-gray-700 leading-7"><p>Our church logo represents our statement of faith.</p><p>If you look at our church logo, there is a boat and an anchor.</p><p>We are anchored in Christ Jesus. The Angel of God said, we are in this unstable, turbulent world (the boat) but it is balance by the Anchor (Jesus Christ).</p><p>We are a prophetic, healing and deliverance ministry which believe that Jesus Christ is the Son of Christ and that he was crucified, died and was buried. On the third day He rose and later ascended to heaven where He remains at the right hand of the Father (the almighty God).</p><p>We believe in the Trinity (God the Father, Jesus Christ and the Holy Spirit) and the Fivefold ministries.</p></div>
+          </article>
+
+          <article className="rounded-3xl border border-deep-blue/20 bg-deep-blue p-8 text-white shadow-lg sm:p-10">
+            <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Heart className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold">The Prayer of Faith</h2></div>
+            <blockquote className="border-l-4 border-gold pl-5 text-lg leading-8 text-blue-50"><p>Is anyone among you suffering? Let him Pray.</p><p>Is anyone cheerful? Let him sing Praise.</p><p>Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord.</p><p>And the prayer of faith will save the one who is sick, and the Lord will raise him up.</p><p>And if he has committed sins, he will be forgiven.</p><footer className="mt-5 font-bold not-italic text-gold">James 5: 13 – 15</footer></blockquote>
+          </article>
         </div>
       </section>
 
