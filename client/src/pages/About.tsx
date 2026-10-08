@@ -185,7 +185,7 @@ export default function About() {
           </article>
 
           <article className="rounded-3xl border border-deep-blue/20 bg-deep-blue p-8 text-white shadow-lg sm:p-10">
-            <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Heart className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold">The Prayer of Faith</h2></div>
+            <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Heart className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold text-gold">The Prayer of Faith</h2></div>
             <blockquote className="border-l-4 border-gold pl-5 text-lg leading-8 text-blue-50"><p>Is anyone among you suffering? Let him Pray.</p><p>Is anyone cheerful? Let him sing Praise.</p><p>Is anyone among you sick? Let him call for the elders of the church, and let them pray over him, anointing him with oil in the name of the Lord.</p><p>And the prayer of faith will save the one who is sick, and the Lord will raise him up.</p><p>And if he has committed sins, he will be forgiven.</p><footer className="mt-5 font-bold not-italic text-gold">James 5: 13 – 15</footer></blockquote>
           </article>
         </div>
