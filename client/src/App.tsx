@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ArrowUp } from "lucide-react";
 import NotFound from "@/pages/NotFound";
+import Navbar from "./components/Navbar";
 import { useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -131,6 +132,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <ScrollRestoration />
+          <Navbar />
           <ScrollToTopButton />
           <RouteTransition />
         </TooltipProvider>

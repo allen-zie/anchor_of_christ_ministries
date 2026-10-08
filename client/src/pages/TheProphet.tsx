@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -35,7 +34,6 @@ export default function TheProphet() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">

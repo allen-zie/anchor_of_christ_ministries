@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'wouter';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ThreeDBoat from '@/components/ThreeDBoat';
 import { Heart, Users, Globe, Hand } from 'lucide-react';
@@ -90,7 +89,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
 
       {/* Hero Section */}
       <section

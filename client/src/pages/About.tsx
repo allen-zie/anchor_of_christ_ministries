@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
 
@@ -162,7 +161,6 @@ export default function About() {
 
   return (
     <div ref={aboutRef} className="min-h-screen bg-white">
-      <Navbar />
 
       {/* Hero Section */}
       <section

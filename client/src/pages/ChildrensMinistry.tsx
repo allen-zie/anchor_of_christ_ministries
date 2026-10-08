@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'wouter';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Heart, Users, Target, Zap, ArrowRight } from 'lucide-react';
 
@@ -75,7 +74,6 @@ export default function ChildrensMinistry() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
 
       {/* Hero Section */}
       <section

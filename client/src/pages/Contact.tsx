@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Mail, Phone, Globe, Clock, MapPin, Send, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 //import location from '@/content/images/location1.webp'
@@ -96,7 +95,6 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
 
       {/* Hero Section with Map Background */}
       <section
