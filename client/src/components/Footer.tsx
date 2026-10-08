@@ -40,11 +40,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-gold">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-white hover:text-gold transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-white hover:text-gold transition-colors"><Youtube size={20} /></a>
-              {/*<a href="#" className="text-white hover:text-gold transition-colors"><Whatsapp size={20} /></a>*/}
-              <a href="#" className="text-white hover:text-gold transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-white hover:text-gold transition-colors"><Instagram size={20} /></a> 
+              <a href="#" aria-label="Facebook" className="text-gold hover:text-yellow-300 transition-colors"><Facebook size={20} /></a>
+              <a href="#" aria-label="YouTube" className="text-gold hover:text-yellow-300 transition-colors"><Youtube size={20} /></a>
+              <a href="#" aria-label="Twitter" className="text-gold hover:text-yellow-300 transition-colors"><Twitter size={20} /></a>
+              <a href="#" aria-label="Instagram" className="text-gold hover:text-yellow-300 transition-colors"><Instagram size={20} /></a>
             </div>
           </div>
         </div>
