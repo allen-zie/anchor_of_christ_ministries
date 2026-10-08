@@ -7,6 +7,29 @@ import { BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const coreValues = [
+  ['FAITH', 'We trust in God’s sovereignty and provision.', 'bg-deep-blue', 'from-deep-blue/10 to-gold/10', 'border-gold/20'],
+  ['COMPASSION', 'We demonstrate love and care for all people.', 'bg-red-500', 'from-red-500/10 to-pink-400/10', 'border-red-500/20'],
+  ['INTEGRITY', 'We uphold honesty, transparency and accountability.', 'bg-gold', 'from-gold/10 to-yellow-600/10', 'border-gold/20'],
+  ['EXCELLENCE', 'We strive for quality and effectiveness in all our endeavours.', 'bg-deep-blue', 'from-light-blue/10 to-deep-blue/10', 'border-deep-blue/20'],
+  ['HUMILITY', 'We serve with humility, recognizing our dependence on God.', 'bg-gold', 'from-gold/10 to-white', 'border-gold/20'],
+  ['UNITY', 'We foster a spirit of unity and collaboration among our team and partners.', 'bg-pink-500', 'from-pink-400/10 to-red-500/10', 'border-pink-500/20'],
+  ['STEWARDSHIP', 'We strive to manage resources wisely, recognizing they belong to God.', 'bg-deep-blue', 'from-deep-blue/10 to-light-blue/10', 'border-deep-blue/20'],
+  ['EVANGELISM', 'We prioritise sharing the Gospel and making disciples.', 'bg-red-500', 'from-red-500/10 to-gold/10', 'border-red-500/20'],
+  ['DISCIPLESHIP', 'We invest in the spiritual growth and development of our team and those we serve.', 'bg-gold', 'from-gold/10 to-pink-400/10', 'border-gold/20'],
+  ['PRAYER', 'We rely on prayer as the foundation of our ministry.', 'bg-deep-blue', 'from-light-blue/10 to-deep-blue/10', 'border-deep-blue/20'],
+  ['LOVE', 'We demonstrate God’s love to all people.', 'bg-pink-500', 'from-pink-400/10 to-red-500/10', 'border-pink-500/20'],
+  ['MARRIAGES', 'Support marriages to stand and be built on the love of God.', 'bg-red-500', 'from-red-500/10 to-pink-400/10', 'border-red-500/20'],
+] as const;
+
+const churchColors = [
+  ['Red', 'Blood of Jesus Christ.', 'bg-red-500', 'text-white'],
+  ['White', 'Purity, righteousness of Christ, Holiness of God.', 'bg-white', 'text-deep-blue'],
+  ['Blue', 'Royalty.', 'bg-deep-blue', 'text-white'],
+  ['Pink', 'Love and Unity.', 'bg-pink-500', 'text-white'],
+  ['Gold', 'Wealth.', 'bg-gold', 'text-white'],
+] as const;
+
 export default function About() {
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -176,6 +199,29 @@ export default function About() {
         </div>
       </section>
 
+      {/* Church Colours */}
+      <section className="bg-light-gray px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Our visual identity</p>
+            <h2 className="mb-4 text-4xl font-bold text-deep-blue">Church Colours</h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-600">Each colour in our identity points us back to the character and work of God.</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {churchColors.map(([name, meaning, swatch, textColor]) => (
+              <div key={name} className="rounded-2xl bg-white p-5 text-center shadow-md">
+                <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-white text-sm font-bold shadow-lg ${swatch} ${textColor}`} aria-label={`${name} church colour`}>
+                  {name.slice(0, 1)}
+                </div>
+                <h3 className="text-lg font-bold text-deep-blue">{name}</h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">{meaning}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Statement and Prayer of Faith */}
       <section className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
@@ -199,46 +245,16 @@ export default function About() {
             <p className="text-lg text-gray-600">The principles that guide everything we do</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="fade-in p-8 bg-gradient-to-br from-deep-blue/10 to-gold/10 rounded-2xl border border-gold/20">
-              <div className="w-12 h-12 bg-deep-blue rounded-full flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-gold" />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {coreValues.map(([title, description, iconColor, cardGradient, borderColor]) => (
+              <div key={title} className={`fade-in rounded-2xl border p-7 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg bg-gradient-to-br ${cardGradient} ${borderColor}`}>
+                <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full ${iconColor}`}>
+                  <Heart className="h-6 w-6 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="mb-3 text-xl font-bold text-deep-blue">{title}</h3>
+                <p className="text-gray-700">{description}</p>
               </div>
-              <h3 className="text-xl font-bold text-deep-blue mb-3">Faith in Christ</h3>
-              <p className="text-gray-700">
-                Jesus Christ is the foundation of all we do. We believe in His resurrection, redemption, and return.
-              </p>
-            </div>
-
-            <div className="fade-in p-8 bg-gradient-to-br from-red-500/10 to-pink-400/10 rounded-2xl border border-red-500/20">
-              <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-deep-blue mb-3">Compassion & Service</h3>
-              <p className="text-gray-700">
-                We serve others with genuine love, meeting both spiritual and physical needs of those we encounter.
-              </p>
-            </div>
-
-            <div className="fade-in p-8 bg-gradient-to-br from-gold/10 to-yellow-600/10 rounded-2xl border border-gold/20">
-              <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
-                <BookOpen className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-deep-blue mb-3">Integrity & Truth</h3>
-              <p className="text-gray-700">
-                We uphold biblical truth and operate with transparency, honesty, and accountability in all endeavors.
-              </p>
-            </div>
-
-            <div className="fade-in p-8 bg-gradient-to-br from-light-blue/10 to-deep-blue/10 rounded-2xl border border-deep-blue/20">
-              <div className="w-12 h-12 bg-deep-blue rounded-full flex items-center justify-center mb-4">
-                <Anchor className="w-6 h-6 text-gold" />
-              </div>
-              <h3 className="text-xl font-bold text-deep-blue mb-3">Global Impact</h3>
-              <p className="text-gray-700">
-                We are committed to reaching across borders, cultures, and communities to spread the Gospel worldwide.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
