@@ -191,15 +191,20 @@ export default function About() {
           <a
             data-tilt
             className="hero-animate group relative block aspect-video transform-gpu overflow-hidden rounded-3xl bg-gradient-to-br from-deep-blue via-blue-600 to-blue-750 shadow-2xl [transform-style:preserve-3d]"
-            href="https://www.youtube.com/@taocim_TV7/videos"
+            href="https://www.youtube.com/watch?v=zV8DGQ4GK50&t=1398s"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Watch Anchor of Christ International Ministries on YouTube"
+            aria-label="Watch Anchor of Christ International Ministries video on YouTube at 23 minutes 18 seconds"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.45),transparent_35%),linear-gradient(135deg,transparent,rgba(0,0,0,0.35))]" />
-            <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full border border-gold/40" />
-            <div className="absolute -bottom-16 -left-8 h-48 w-48 rounded-full border border-white/15" />
-            <div className="relative flex h-full flex-col items-center justify-center px-8 text-center text-white">
+            <img
+              className="pointer-events-none absolute inset-0 h-full w-full scale-[1.01] object-cover opacity-70 transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+              src="https://i.ytimg.com/vi/zV8DGQ4GK50/hqdefault.jpg"
+              alt=""
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(212,175,55,0.35),transparent_35%),linear-gradient(135deg,rgba(4,35,87,0.2),rgba(0,0,0,0.48))] transition-opacity duration-300 group-hover:opacity-80" />
+            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full border border-gold/40 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
+            <div className="pointer-events-none absolute -bottom-16 -left-8 h-48 w-48 rounded-full border border-white/15 transition-transform duration-500 group-hover:-rotate-12 group-hover:scale-110" />
+            <div className="pointer-events-none relative flex h-full flex-col items-center justify-center px-8 text-center text-white">
               <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-red-600 shadow-lg shadow-red-950/40 transition-transform duration-300 group-hover:scale-110">
                 <Play className="ml-1 h-9 w-9 fill-white text-white" aria-hidden="true" />
               </div>
