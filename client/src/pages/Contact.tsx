@@ -105,10 +105,10 @@ export default function Contact() {
       {/* Hero Section with Map Background */}
       <section
         ref={heroRef}
-        className="pt-32 pb-87 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        className="pt-32 pb-40 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
         style={{
           // backgroundImage: `url("${location}")`,
-          backgroundImage: `url("https://images.unsplash.com/photo-1715706107718-4a0cc4f0335c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1715706107718-4a0cc4f0335c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
           backgroundSize: '90% 90%',
           backgroundPosition: 'center',
         }}
@@ -120,12 +120,12 @@ export default function Contact() {
               <p className="text-sm font-semibold text-gold uppercase">Get in Touch</p>
             </div>
 
-            <h1 className="hero-animate text-5xl lg:text-6xl font-bold text-deep-blue leading-tight">
+            <h1 className="hero-animate text-5xl lg:text-6xl font-bold text-blue-800 leading-tight">
               We'd Love to<br />
               <span className="text-gold">Hear From You</span>
             </h1>
 
-            <p className="hero-animate text-lg text-gray-700 leading-relaxed">
+            <p className="hero-animate text-lg text-white leading-relaxed">
               Whether you have a question, need prayer, or want to partner with us, we are here for you.
             </p>
           </div>
@@ -340,7 +340,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="tel:+263771234567"
+                  href="tel:+263781486639"
                   aria-label="Call The Anchor of Christ International Ministries"
                   className="group px-3 py-7 text-center transition-colors hover:bg-[#f4f8fd] lg:px-2"
                 >
@@ -348,7 +348,7 @@ export default function Contact() {
                     <Phone className="h-7 w-7" aria-hidden="true" />
                   </div>
                   <p className="text-xs font-bold uppercase tracking-[0.08em] text-[#123a82]">Call Us</p>
-                  <p className="mt-2 text-[0.7rem] leading-5 text-[#5c6d86]">+263 77 123 4567</p>
+                  <p className="mt-2 text-[0.7rem] leading-5 text-[#5c6d86]">+263 781 486 639</p>
                   <div className="mx-auto mt-4 h-1 w-7 rounded-full bg-[#e52d4f]" />
                 </a>
 
@@ -447,7 +447,7 @@ export default function Contact() {
               <svg className="w-6 h-6 text-deep-blue" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>
-              <p className="text-3xl lg:text-4xl font-bold text-deep-blue">15+</p>
+              <p className="text-3xl lg:text-4xl font-bold text-deep-blue">13+</p>
             </div>
             <p className="text-sm text-gray-600">Years of Ministry</p>
           </div>

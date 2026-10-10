@@ -51,7 +51,7 @@ export default function Giving() {
             Support The Ministry
           </h1>
           <p className="text-xl text-gray-600">
-            Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver. 2 Corinthians 9:7
+            <i>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.</i> <b>2 Corinthians 9 vs 7</b>
           </p>
         </div>
       </section>
@@ -63,7 +63,7 @@ export default function Giving() {
           <div className="fade-in">
             <h2 className="text-3xl font-bold text-deep-blue mb-6">Why Give?</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            In everything I did, I showed you that by this kind of hard work we must help the weak, remembering the words the Lord Jesus himself said: "It is more blessed to give than to receive.” Acts 20:35 
+            <i>In everything I did, I showed you that by this kind of hard work we must help the weak, remembering the words the Lord Jesus himself said: "It is more blessed to give than to receive.”</i> <b>Acts 20 vs 35</b>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 bg-gradient-to-br from-deep-blue/10 to-gold/10 rounded-lg border border-gold/20">
@@ -136,19 +136,19 @@ export default function Giving() {
           </div>
 
           {/* Impact */}
-          <div className="fade-in bg-gradient-to-r from-deep-blue to-blue-700 text-white p-12 rounded-lg">
-            <h2 className="text-3xl font-bold mb-6">Your Impact</h2>
+          <div className="fade-in bg-gradient-to-r from-blue-600 to-blue-700 text-white p-12 rounded-lg">
+            <h2 className="text-gold font-bold mb-6">Your Impact</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <p className="text-4xl font-bold text-gold mb-2">$50</p>
-                <p className="text-lg">Provides Bibles for new believers</p>
+                <p className="text-4xl font-bold text-gold mb-2">Building</p>
+                <p className="text-lg">Supports the construction and maintenance of our facilities</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-gold mb-2">$100</p>
-                <p className="text-lg">Supports a week of discipleship training</p>
+                <p className="text-4xl font-bold text-gold mb-2">Ophans</p>
+                <p className="text-lg">Supports the care and education of orphaned children</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-gold mb-2">$500</p>
+                <p className="text-4xl font-bold text-gold mb-2">Evangelism</p>
                 <p className="text-lg">Enables a missionary outreach event</p>
               </div>
             </div>

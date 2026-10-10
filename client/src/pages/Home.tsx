@@ -195,9 +195,9 @@ export default function Home() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl lg:text-3xl font-serif italic mb-6">
-            "We have this hope as an anchor for the soul, firm and secure. It enters the inner sanctuary behind the curtain."
+            <i>"We have this hope as an anchor for the soul, firm and secure. It enters the inner sanctuary behind the curtain."</i>
           </p>
-          <p className="text-lg text-gold font-semibold">HEBREWS 6:19</p>
+          <p className="text-lg text-gold font-semibold"><b>HEBREWS 6 vs 19</b></p>
         </div>
       </section>
 
@@ -217,7 +217,7 @@ export default function Home() {
             <p className="text-sm text-gray-600 mt-2">Countries Reached</p>
           </div>
           <div>
-            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">12+</p>
+            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">13+</p>
             <p className="text-sm text-gray-600 mt-2">Years of Ministry</p>
           </div>
         </div>

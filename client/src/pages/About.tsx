@@ -232,7 +232,7 @@ export default function About() {
             <div data-3d-item data-tilt className="transform-gpu p-6 rounded-2xl border border-gray-100 bg-white shadow-lg [transform-style:preserve-3d]">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0"><Anchor className="w-6 h-6 text-gold" aria-hidden="true" /></div>
-                <div><h3 className="mb-2 font-bold text-blue-700">OUR VISION</h3><p className="text-sm leading-6 text-gray-700">To serve Christ, touch lives, win souls to Jesus, and bring transformation to communities in Bulawayo and the world.</p><p className="mt-3 text-sm leading-6 text-gray-700">The fruit of the righteous is a tree of life, and whoever captures souls is wise. ~ Proverbs 11:30</p></div>
+                <div><h3 className="mb-2 font-bold text-blue-700">OUR VISION</h3><p className="text-sm leading-6 text-gray-700">To serve Christ, touch lives, win souls to Jesus, and bring transformation to communities in Bulawayo and the world.</p><p className="mt-3 text-sm leading-6 text-gray-700"><i>The fruit of the righteous is a tree of life, and whoever captures souls is wise.</i> ~ <b>Proverbs 11 vs 30</b></p></div>
               </div>
             </div>
 
@@ -528,7 +528,7 @@ export default function About() {
               <svg className="w-6 h-6 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>
-              <p className="text-3xl lg:text-4xl font-bold text-blue-700">15+</p>
+              <p className="text-3xl lg:text-4xl font-bold text-blue-700">13+</p>
             </div>
             <p className="text-sm text-gray-600">Years of Ministry</p>
           </div>

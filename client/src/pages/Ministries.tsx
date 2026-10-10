@@ -103,35 +103,35 @@ export default function Ministries() {
       title: "Men's Ministry",
       description: 'Equipping men to lead with faith, strength, and integrity.',
       icon: '⚔️',
-      color: 'from-deep-blue to-blue-700',
+      color: 'from-white-500 to-blue-600',
       link: '/men-ministry',
     },
     {
       title: "Women's Ministry",
       description: 'Empowering women to grow in grace, purpose, and godly fellowship.',
       icon: '🌸',
-      color: 'from-pink-400 to-pink-500',
+      color: 'from-white-500 to-pink-600',
       link: '/women-ministry',
     },
     {
       title: 'Youth Ministry',
       description: 'Inspiring young hearts to live boldly for Christ in today\'s world.',
       icon: '⚡',
-      color: 'from-gold to-yellow-600',
+      color: 'from-white-500 to-gold',
       link: '/youth-ministry',
     },
     {
       title: "Children's Ministry",
       description: 'Nurturing young minds with Biblical truths through fun and creativity.',
       icon: '🏰',
-      color: 'from-red-500 to-red-600',
+      color: 'from-white to-red-600',
       link: '/children-ministry',
     },
     {
       title: 'Anna Group',
       description: 'A ministry dedicated to honoring and supporting our senior members.',
       icon: '👵',
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-white-500 to-purple-600',
       link: '/anna-group',
     },
   ];
@@ -203,7 +203,7 @@ export default function Ministries() {
         className="pt-55 pb-35 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white"
         style={{
           // backgroundImage: `url("${location}")`,
-          backgroundImage: `url("https://thumbs.dreamstime.com/b/old-scroll-paper-background-old-scroll-paper-background-361158206.jpg?w=992")`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://thumbs.dreamstime.com/b/old-scroll-paper-background-old-scroll-paper-background-361158206.jpg?w=992")`,
           backgroundSize: '100% 100%',
           backgroundPosition: 'center',
         }}
@@ -213,11 +213,11 @@ export default function Ministries() {
             <p className="text-sm font-semibold text-gold uppercase">Our Ministries</p>
           </div>
 
-          <h1 className="hero-animate text-5xl lg:text-6xl font-bold text-deep-blue leading-tight mb-6">
+          <h1 className="hero-animate text-5xl lg:text-6xl font-bold text-blue-600 leading-tight mb-6">
             Our <span className="text-gold">Ministries</span>
           </h1>
 
-          <p className="hero-animate text-lg text-gray-700 leading-relaxed max-w-3xl">
+          <p className="hero-animate text-lg text-white leading-relaxed max-w-3xl">
             At The Anchor of Christ, we serve every generation with purpose and love. Explore the different ministries making an eternal impact.
           </p>
         </div>
@@ -249,9 +249,9 @@ export default function Ministries() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-deep-blue to-blue-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl lg:text-3xl font-serif italic mb-6">
-            "We have this hope as an anchor for the soul, firm and secure. It enters the inner sanctuary behind the curtain."
+            <i>"We have this hope as an anchor for the soul, firm and secure. It enters the inner sanctuary behind the curtain."</i>
           </p>
-          <p className="text-lg text-gold font-semibold">HEBREWS 6:19</p>
+          <p className="text-lg text-gold font-semibold"><b>HEBREWS 6 vs 19</b></p>
         </div>
       </section>
 
@@ -323,7 +323,7 @@ export default function Ministries() {
       {/* Call to Action */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-deep-blue to-blue-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Get Involved</h2>
+          <h2 className="text-gold font-bold mb-4">Get Involved</h2>
           <p className="text-lg mb-8">
             Whether through volunteering, giving, or prayer support, you can be part of our mission to transform lives and advance God's kingdom.
           </p>

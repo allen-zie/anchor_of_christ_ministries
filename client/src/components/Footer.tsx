@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+//import { FaTiktok } from 'react-icons/fa';
 
 export default function Footer() {
   const scrollToPageTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
@@ -42,10 +43,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-gold">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" aria-label="Facebook" className="text-gold hover:text-yellow-300 transition-colors"><Facebook size={20} /></a>
-              <a href="#" aria-label="YouTube" className="text-gold hover:text-yellow-300 transition-colors"><Youtube size={20} /></a>
-              <a href="#" aria-label="Twitter" className="text-gold hover:text-yellow-300 transition-colors"><Twitter size={20} /></a>
-              <a href="#" aria-label="Instagram" className="text-gold hover:text-yellow-300 transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61573850645463" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gold hover:text-yellow-300 transition-colors"><Facebook size={20} /></a>
+              <a href="https://www.youtube.com/@taocim_TV7" target="_blank" rel="noopener noreferrer" aria-label="YouTube"  className="text-gold hover:text-yellow-300 transition-colors"><Youtube size={20} /></a>
+              <a href="https://www.tiktok.com/@decidechauke0?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="Tiktok" className="text-gold hover:text-yellow-300 transition-colors"><Twitter size={20} /></a>
+              <a href="#" target="_blank" rel="noopener noreferrer"  aria-label="Instagram" className="text-gold hover:text-yellow-300 transition-colors"><Instagram size={20} /></a>
             </div>
           </div>
         </div>

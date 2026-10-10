@@ -249,7 +249,7 @@ export default function Events() {
       {/* Newsletter Signup */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-deep-blue to-blue-700 text-white">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="mb-4 text-3xl font-bold text-white">Stay Updated</h2>
+          <h2 className="mb-4 text-3xl font-bold text-gold">Stay Updated</h2>
           <p className="text-lg mb-6">
             Subscribe to our newsletter to receive updates about upcoming events and programs.
           </p>
