@@ -9,6 +9,7 @@ import { Heart, Users, Globe, Hand } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const pageRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
@@ -19,9 +20,8 @@ export default function Home() {
       const headings = heroRef.current.querySelectorAll('h1, p');
       gsap.fromTo(
         headings,
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           stagger: 0.15,
@@ -32,9 +32,8 @@ export default function Home() {
       const buttons = heroRef.current.querySelectorAll('button');
       gsap.fromTo(
         buttons,
-        { opacity: 0, scale: 0.9 },
+        { scale: 0.9 },
         {
-          opacity: 1,
           scale: 1,
           duration: 0.6,
           stagger: 0.1,
@@ -48,9 +47,8 @@ export default function Home() {
     if (statsRef.current) {
       gsap.fromTo(
         statsRef.current.querySelectorAll('.stat-card'),
-        { opacity: 0, scale: 0.8 },
+        { scale: 0.8 },
         {
-          opacity: 1,
           scale: 1,
           duration: 0.6,
           stagger: 0.1,
@@ -68,9 +66,8 @@ export default function Home() {
     if (quoteRef.current) {
       gsap.fromTo(
         quoteRef.current,
-        { opacity: 0, y: 50 },
+        { y: 50 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           scrollTrigger: {
@@ -83,12 +80,20 @@ export default function Home() {
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      const pageRoot = pageRef.current;
+      if (pageRoot) {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          const triggerElement = trigger.trigger;
+          if (triggerElement instanceof Element && pageRoot.contains(triggerElement)) {
+            trigger.kill();
+          }
+        });
+      }
     };
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div ref={pageRef} className="min-h-screen bg-white">
 
       {/* Hero Section */}
       <section

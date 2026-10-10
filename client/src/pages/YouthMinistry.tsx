@@ -8,6 +8,7 @@ import { Heart, Users, Target, Zap, ArrowRight } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function YouthMinistry() {
+  const pageRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
@@ -18,9 +19,8 @@ export default function YouthMinistry() {
       const elements = heroRef.current.querySelectorAll('.hero-animate');
       gsap.fromTo(
         elements,
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           stagger: 0.15,
@@ -33,9 +33,8 @@ export default function YouthMinistry() {
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current.querySelectorAll('.fade-in'),
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           stagger: 0.2,
@@ -52,9 +51,8 @@ export default function YouthMinistry() {
     if (statsRef.current) {
       gsap.fromTo(
         statsRef.current.querySelectorAll('.stat-item'),
-        { opacity: 0, scale: 0.8 },
+        { scale: 0.8 },
         {
-          opacity: 1,
           scale: 1,
           duration: 0.6,
           stagger: 0.1,
@@ -68,12 +66,20 @@ export default function YouthMinistry() {
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      const pageRoot = pageRef.current;
+      if (pageRoot) {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          const triggerElement = trigger.trigger;
+          if (triggerElement instanceof Element && pageRoot.contains(triggerElement)) {
+            trigger.kill();
+          }
+        });
+      }
     };
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div ref={pageRef} className="min-h-screen bg-white">
 
       {/* Hero Section */}
       <section

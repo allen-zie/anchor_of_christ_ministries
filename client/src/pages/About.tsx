@@ -45,9 +45,8 @@ export default function About() {
       root.querySelectorAll<HTMLElement>('[data-3d-section]').forEach((section) => {
         gsap.fromTo(
           section.querySelectorAll<HTMLElement>('[data-3d-item]'),
-          { opacity: 0, y: 42, z: -70, rotateX: -7 },
+          { y: 42, z: -70, rotateX: -7 },
           {
-            opacity: 1,
             y: 0,
             z: 0,
             rotateX: 0,
@@ -85,9 +84,8 @@ export default function About() {
       const elements = heroRef.current.querySelectorAll('.hero-animate');
       gsap.fromTo(
         elements,
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           stagger: 0.15,
@@ -100,9 +98,8 @@ export default function About() {
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current.querySelectorAll('.fade-in'),
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           stagger: 0.2,
@@ -119,9 +116,8 @@ export default function About() {
     if (timelineRef.current) {
       gsap.fromTo(
         timelineRef.current.querySelectorAll('.timeline-item'),
-        { opacity: 0, x: -30 },
+        { x: -30 },
         {
-          opacity: 1,
           x: 0,
           duration: 0.8,
           stagger: 0.2,
@@ -138,9 +134,8 @@ export default function About() {
     if (statsRef.current) {
       gsap.fromTo(
         statsRef.current.querySelectorAll('.stat-item'),
-        { opacity: 0, scale: 0.8 },
+        { scale: 0.8 },
         {
-          opacity: 1,
           scale: 1,
           duration: 0.6,
           stagger: 0.1,
@@ -155,7 +150,15 @@ export default function About() {
 
     return () => {
       cleanupTilt.forEach((cleanup) => cleanup());
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      const pageRoot = aboutRef.current;
+      if (pageRoot) {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          const triggerElement = trigger.trigger;
+          if (triggerElement instanceof Element && pageRoot.contains(triggerElement)) {
+            trigger.kill();
+          }
+        });
+      }
     };
   }, []);
 

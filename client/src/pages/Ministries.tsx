@@ -8,6 +8,7 @@ import { Heart, Users, Globe, Zap, Building2, ArrowRight } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Ministries() {
+  const pageRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const ministriesRef = useRef<HTMLDivElement>(null);
   const departmentsRef = useRef<HTMLDivElement>(null);
@@ -20,9 +21,8 @@ export default function Ministries() {
       const elements = heroRef.current.querySelectorAll('.hero-animate');
       gsap.fromTo(
         elements,
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.8,
           stagger: 0.15,
@@ -35,9 +35,8 @@ export default function Ministries() {
     if (ministriesRef.current) {
       gsap.fromTo(
         ministriesRef.current.querySelectorAll('.ministry-card'),
-        { opacity: 0, scale: 0.9 },
+        { scale: 0.9 },
         {
-          opacity: 1,
           scale: 1,
           duration: 0.6,
           stagger: 0.15,
@@ -54,9 +53,8 @@ export default function Ministries() {
     if (departmentsRef.current) {
       gsap.fromTo(
         departmentsRef.current.querySelectorAll('.dept-item'),
-        { opacity: 0, x: -30 },
+        { x: -30 },
         {
-          opacity: 1,
           x: 0,
           duration: 0.6,
           stagger: 0.1,
@@ -73,9 +71,8 @@ export default function Ministries() {
     if (statsRef.current) {
       gsap.fromTo(
         statsRef.current.querySelectorAll('.stat-item'),
-        { opacity: 0, scale: 0.8 },
+        { scale: 0.8 },
         {
-          opacity: 1,
           scale: 1,
           duration: 0.6,
           stagger: 0.1,
@@ -89,7 +86,15 @@ export default function Ministries() {
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      const pageRoot = pageRef.current;
+      if (pageRoot) {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          const triggerElement = trigger.trigger;
+          if (triggerElement instanceof Element && pageRoot.contains(triggerElement)) {
+            trigger.kill();
+          }
+        });
+      }
     };
   }, []);
 
@@ -190,7 +195,7 @@ export default function Ministries() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div ref={pageRef} className="min-h-screen bg-white">
 
       {/* Hero Section */}
       <section

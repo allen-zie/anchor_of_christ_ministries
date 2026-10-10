@@ -38,15 +38,15 @@ const formatEventDate = (startDate: string, endDate?: string) => {
 };
 
 export default function Events() {
+  const pageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current.querySelectorAll('.event-card'),
-        { opacity: 0, y: 30 },
+        { y: 30 },
         {
-          opacity: 1,
           y: 0,
           duration: 0.6,
           stagger: 0.15,
@@ -60,7 +60,15 @@ export default function Events() {
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      const pageRoot = pageRef.current;
+      if (pageRoot) {
+        ScrollTrigger.getAll().forEach((trigger) => {
+          const triggerElement = trigger.trigger;
+          if (triggerElement instanceof Element && pageRoot.contains(triggerElement)) {
+            trigger.kill();
+          }
+        });
+      }
     };
   }, []);
 
@@ -177,7 +185,7 @@ export default function Events() {
   );
 
   return (
-    <div className="min-h-screen bg-white">
+    <div ref={pageRef} className="min-h-screen bg-white">
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">
