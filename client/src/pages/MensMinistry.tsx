@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'wouter';
 import Footer from '@/components/Footer';
 import { Heart, Users, Target, Zap, ArrowRight } from 'lucide-react';
+import backgroundImage from '@/content/images/mens.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,6 +86,11 @@ export default function MensMinistry() {
       <section
         ref={heroRef}
         className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-deep-blue to-blue-700 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="max-w-7xl mx-auto">
           <Link href="/ministries">
@@ -198,7 +204,7 @@ export default function MensMinistry() {
           <p className="text-2xl lg:text-3xl font-serif italic mb-6">
             "Be strong and courageous. Do not be afraid or terrified because of them, for the Lord your God goes with you."
           </p>
-          <p className="text-lg text-gold font-semibold">DEUTERONOMY 31:6</p>
+          <p className="text-lg text-gold font-semibold">Deuteronomy 31 vs 6</p>
         </div>
       </section>
 
