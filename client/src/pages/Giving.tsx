@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Giving() {
   const pageRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,12 +46,19 @@ export default function Giving() {
     <div ref={pageRef} className="min-h-screen bg-white">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">
+      <section ref={heroRef}
+        className="pt-55 pb-35 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white"
+        style={{
+          // backgroundImage: `url("${location}")`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://imageio.forbes.com/specials-images/imageserve/612d92327aea291d3c1adcb0/How-to-be-a-more-effective-charitable-donor/0x0.jpg?width=960&dpr=1.5")`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+        }}>
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl lg:text-6xl font-bold text-deep-blue mb-6">
+          <h1 className="text-5xl lg:text-6xl font-bold text-blue-700 mb-6">
             Support The Ministry
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-white">
             <i>Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.</i> <b>2 Corinthians 9 vs 7</b>
           </p>
         </div>
