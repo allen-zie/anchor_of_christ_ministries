@@ -3,6 +3,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
 import { BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
+import BuildingImage from '@/content/images/Building.webp';
+import AboutImage from '@/content/images/aboutus.webp';
+import ColoursImage from '@/content/images/womens.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -169,6 +172,11 @@ export default function About() {
       <section
         ref={heroRef}
         className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("${AboutImage}")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -182,8 +190,8 @@ export default function About() {
               <span className="text-gold">Souls to Jesus.</span>
             </h1>
 
-            <p className="hero-animate text-lg text-gray-700 leading-relaxed">
-              Since 2012, The Anchor of Christ International Ministries has been reaching souls, building believers, and impacting nations with the love of Christ.
+            <p className="hero-animate text-lg text-white leading-relaxed">
+              Since 2012, The Anchor of Christ International Ministries has been serving christ, touching lives, and and bringing souls to Jesus Christ through the power of the Holy Spirit.
             </p>
           </div>
 
@@ -289,12 +297,18 @@ export default function About() {
       </section>
 
       {/* Church Colours */}
-      <section data-3d-section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
+      <section data-3d-section className="bg-white px-4 py-16 sm:px-6 lg:px-8"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("${AboutImage}")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-gold">Our visual identity</p>
             <h2 className="mb-4 text-4xl font-bold text-blue-700">Church Colours</h2>
-            <p className="mx-auto max-w-2xl text-lg text-gray-600">Each colour in our identity points us back to the character and work of God.</p>
+            <p className="mx-auto max-w-2xl text-lg text-white">Each colour in our identity points us back to the character and work of God.</p>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -312,10 +326,10 @@ export default function About() {
       </section>
 
       {/* Timeline Section */}
-      <section ref={timelineRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+      <section ref={timelineRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-200 to-blue-750">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-blue-700 mb-4">Our Journey</h2>
+            <h2 className="text-4xl font-bold text-dark-blue mb-4">Our Journey</h2>
             <p className="text-lg text-gray-600">A timeline of faith and growth</p>
           </div>
 
@@ -368,83 +382,50 @@ export default function About() {
               </div>
             </div>
 
-            {/* 2024 */}
+             {/* 2021 */}
+            <div className="timeline-item flex gap-6">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-gold font-bold text-lg shadow-lg">
+                  2021
+                </div>
+                <div className="w-1 h-24 bg-gradient-to-b from-white to-transparent mt-4"></div>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-white">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Started fellowshiping at the Prayer Mountain</h3>
+                <p className="text-gray-700">
+                  During the Covid-19 pandemic the church moved to fellowship at the Prayer Mountain for a year. It was at a period when is was not safe to fellowship in large numbers in closed environments, hence not looking past the chanllenges of rentals. Even during the tough times the church continued to grow and reach more souls to Jesus Christ through the Holy Spirit .
+                </p>
+              </div>
+            </div>
+
+            {/* 2022 */}
             <div className="timeline-item flex gap-6">
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  2022
+                </div>
+                <div className="w-1 h-24 bg-gradient-to-b from-pink-500 to-transparent mt-4"></div>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-pink-500">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Moved to the Church Auditorium</h3>
+                <p className="text-gray-700">
+                  After the pandemic, the church moved to the Church Auditorium, providing a more suitable space for our growing congregation and enabling us to host larger events and gatherings.
+                </p>
+              </div>
+            </div>
+
+            {/* 2024 */}
+            <div className="timeline-item flex gap-6">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   2024+
                 </div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-pink-500">
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-blue-700">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">Expanding Our Reach, Equipping Leaders, Impacting Nations</h3>
                 <p className="text-gray-700">
                   We continue to expand our global footprint, equipping leaders and impacting nations. Our vision remains clear: to see the Gospel transform lives across the world.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Prophet/Leader Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-750 to-blue-600 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Image Placeholder */}
-            <div className="flex justify-center">
-              <div className="w-80 h-96 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👨‍🙏</div>
-                  <p className="text-white font-semibold">Prophet Dr D. Chauke</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Content */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-gold font-semibold uppercase mb-2">Leadership</p>
-                <h2 className="text-4xl font-bold mb-4">Meet Prophet Dr D. Chauke</h2>
-              </div>
-
-              <p className="text-lg text-gray-100 leading-relaxed">
-                Prophet Dr D. Chauke is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for savouring Christ and bringing souls to Jesus.
-              </p>
-
-              <p className="text-lg text-gray-100 leading-relaxed">
-                Under God's guidance and spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across multiple countries. With teachings emphasising the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
-              </p>
-
-              <div className="space-y-4 pt-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-blue-700 font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Visionary Leadership</h3>
-                    <p className="text-gray-100">Guiding the ministry with clear vision and spiritual direction</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-blue-700 font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Spiritual Mentorship</h3>
-                    <p className="text-gray-100">Equipping leaders and believers for greater impact</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-blue-700 font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Global Outreach</h3>
-                    <p className="text-gray-100">Extending the Gospel's reach across nations and cultures</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -479,7 +460,9 @@ export default function About() {
             <div className="flex justify-center">
               <div className="w-full h-96 bg-gradient-to-br from-blue-700/10 to-gold/10 rounded-2xl flex items-center justify-center border border-gold/20">
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🏠</div>
+                  <div className="text-6xl mb-4">
+                    <img src={BuildingImage} alt="Community Impact" className="w-full h-full object-cover rounded-2xl flex items-center justify-center border border-gold/20" />
+                  </div>
                   <p className="text-blue-700 font-semibold">Community Impact</p>
                 </div>
               </div>
@@ -494,7 +477,7 @@ export default function About() {
           <p className="text-2xl lg:text-3xl font-serif italic mb-6">
             "So we, being many, are one body in Christ, and individually members of one another."
           </p>
-          <p className="text-lg text-gold font-semibold">ROMANS 12:5</p>
+          <p className="text-lg text-gold font-semibold">ROMANS 12 vs 5</p>
         </div>
       </section>
 
@@ -533,7 +516,7 @@ export default function About() {
               <svg className="w-6 h-6 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
               </svg>
-              <p className="text-3xl lg:text-4xl font-bold text-blue-700">13+</p>
+              <p className="text-3xl lg:text-4xl font-bold text-blue-700">14</p>
             </div>
             <p className="text-sm text-gray-600">Years of Ministry</p>
           </div>
