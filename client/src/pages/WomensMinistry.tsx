@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'wouter';
 import Footer from '@/components/Footer';
 import { Heart, Users, Target, Zap, ArrowRight } from 'lucide-react';
+import backgroundImage from '@/content/images/womens.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -85,6 +86,11 @@ export default function WomensMinistry() {
       <section
         ref={heroRef}
         className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-400 to-pink-500 text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${backgroundImage})`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="max-w-7xl mx-auto">
           <Link href="/ministries">

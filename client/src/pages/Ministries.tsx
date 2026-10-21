@@ -127,16 +127,16 @@ export default function Ministries() {
       color: 'from-white to-red-600',
       link: '/children-ministry',
     },
-    {
+    /*{
       title: 'Anna Group',
       description: 'A ministry dedicated to honoring and supporting our senior members.',
       icon: '👵',
       color: 'from-white-500 to-purple-600',
       link: '/anna-group',
-    },
+    },*/
   ];
 
-  const departments = [
+  /*const departments = [
     {
       name: 'Finance',
       description: 'Managing resources with integrity and transparency to support our mission.',
@@ -192,7 +192,7 @@ export default function Ministries() {
       description: 'Leading our congregation in worship and creating an atmosphere of praise.',
       icon: '🎵',
     },
-  ];
+  ];*/
 
   return (
     <div ref={pageRef} className="min-h-screen bg-white">
@@ -256,7 +256,7 @@ export default function Ministries() {
       </section>
 
       {/* Departments Section */}
-      <section ref={departmentsRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
+      {/*<section ref={departmentsRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-deep-blue mb-4">Our Departments</h2>
@@ -282,7 +282,7 @@ export default function Ministries() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Statistics Section */}
       <section ref={statsRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-white">

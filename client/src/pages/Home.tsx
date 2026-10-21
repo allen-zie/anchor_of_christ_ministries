@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ThreeDBoat from '@/components/ThreeDBoat';
 import { ArrowRight, CalendarDays, Clock3, Heart, MapPin, Users, Globe, Hand } from 'lucide-react';
 import { formatEventDate, getUpcomingEvents } from '@/lib/events';
+import ProphetImage from '@/content/images/Prophet6.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -230,6 +231,72 @@ export default function Home() {
           </div>
         </div>
       </section>
+       {/* Prophet/Leader Section */}
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-750 to-blue-600 text-white">
+              <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  {/* Left - Image Placeholder */}
+                  <div className="flex justify-center">
+                    <div className="w-80 h-96 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+                      <div className="text-center">
+                        <div className="text-6xl mb-4">
+                          <img src={ProphetImage} alt="Prophet Dr D. Chauke" className="w-full h-full object-cover rounded-full" />
+                        </div>
+                        <p className="text-white font-semibold">Prophet Dr D. Chauke</p>
+                      </div>
+                    </div>
+                  </div>
+      
+                  {/* Right - Content */}
+                  <div className="space-y-6">
+                    <div>
+                      <p className="text-gold font-semibold uppercase mb-2">Leadership</p>
+                      <h2 className="text-4xl font-bold mb-4">Meet Prophet Dr D. Chauke</h2>
+                    </div>
+      
+                    <p className="text-lg text-gray-100 leading-relaxed">
+                      Prophet Dr D. Chauke is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for savouring Christ and bringing souls to Jesus.
+                    </p>
+      
+                    <p className="text-lg text-gray-100 leading-relaxed">
+                      Under God's guidance and spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across multiple countries. With teachings emphasising the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
+                    </p>
+      
+                    <div className="space-y-4 pt-4">
+                      <div className="flex items-start gap-4">
+                        <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <span className="text-blue-700 font-bold">✓</span>
+                        </div>
+                        <div>
+                          <h3 className="font-bold mb-1">Visionary Leadership</h3>
+                          <p className="text-gray-100">Guiding the ministry with clear vision and spiritual direction</p>
+                        </div>
+                      </div>
+      
+                      <div className="flex items-start gap-4">
+                        <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <span className="text-blue-700 font-bold">✓</span>
+                        </div>
+                        <div>
+                          <h3 className="font-bold mb-1">Spiritual Mentorship</h3>
+                          <p className="text-gray-100">Equipping leaders and believers for greater impact</p>
+                        </div>
+                      </div>
+      
+                      <div className="flex items-start gap-4">
+                        <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                          <span className="text-blue-700 font-bold">✓</span>
+                        </div>
+                        <div>
+                          <h3 className="font-bold mb-1">Global Outreach</h3>
+                          <p className="text-gray-100">Extending the Gospel's reach across nations and cultures</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
       {/* Quote Section */}
       <section
@@ -260,7 +327,7 @@ export default function Home() {
             <p className="text-sm text-gray-600 mt-2">Countries Reached</p>
           </div>
           <div>
-            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">13+</p>
+            <p className="text-3xl lg:text-4xl font-bold text-deep-blue">14</p>
             <p className="text-sm text-gray-600 mt-2">Years of Ministry</p>
           </div>
         </div>
