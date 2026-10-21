@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'wouter';
 import Footer from '@/components/Footer';
 import { ArrowRight, BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
-import BuildingImage from '@/content/images/Building.webp';
+import BuildingImage from '@/content/images/building.webp';
 import AboutImage from '@/content/images/aboutus.webp';
 import ColoursImage from '@/content/images/womens.webp';
 
