@@ -237,7 +237,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   {/* Left - Image Placeholder */}
                   <div className="flex justify-center">
-                    <div className="w-80 h-96 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+                    <div className="w-80 h-96 ">
                       <div className="text-center">
                         <div className="text-6xl mb-4">
                           <img src={ProphetImage} alt="Prophet Dr D. Chauke" className="w-full h-full object-cover rounded-full" />
@@ -293,6 +293,13 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
+
+                  <Link href="/the-prophet">
+                    <a className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-deep-blue transition-transform hover:-translate-y-1">
+                      READ HIS BIOGRAPHY <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </a>
+                  </Link>
+
                   </div>
                 </div>
               </div>

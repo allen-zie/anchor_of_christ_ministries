@@ -83,18 +83,18 @@ export default function Media() {
 
             {/* Live Services */}
             <Link href="/live-services">
-              <div className="media-card p-8 bg-gradient-to-br from-red-500 to-red-600 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
+              <div className="media-card p-8 bg-gradient-to-br from-deep-blue to-blue-700 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <Tv className="w-8 h-8" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-center">Live Services</h3>
+                <h3 className="text-2xl font-bold mb-3 text-center text-gold">Live Services</h3>
                 <p className="text-center text-sm text-gray-100 mb-4">
                   Join us online for live worship, prayer, and ministry from anywhere in the world
                 </p>
                 <div className="text-center">
-                  <span className="inline-block px-4 py-2 bg-white text-red-500 font-bold rounded-full text-sm">
+                  <span className="inline-block px-4 py-2 bg-white text-blue-700 font-bold rounded-full text-sm">
                     Watch Live →
                   </span>
                 </div>
@@ -103,7 +103,7 @@ export default function Media() {
 
             {/* Testimonies */}
             <Link href="/testimonies">
-              <div className="media-card p-8 bg-gradient-to-br from-pink-400 to-pink-500 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
+              <div className="media-card p-8 bg-gradient-to-br from-gold to-yellow-600 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
                     <Users className="w-8 h-8" />
@@ -114,7 +114,7 @@ export default function Media() {
                   Hear from those whose lives have been transformed by God's grace through our ministry
                 </p>
                 <div className="text-center">
-                  <span className="inline-block px-4 py-2 bg-white text-pink-500 font-bold rounded-full text-sm">
+                  <span className="inline-block px-4 py-2 bg-white text-gold font-bold rounded-full text-sm">
                     Read Stories →
                   </span>
                 </div>

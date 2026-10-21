@@ -7,6 +7,8 @@ import { ArrowRight, BookOpen, Anchor, Target, Heart, Play, Youtube } from 'luci
 import BuildingImage from '@/content/images/building.webp';
 import AboutImage from '@/content/images/aboutus.webp';
 import ColoursImage from '@/content/images/womens.webp';
+import StatementImage from '@/content/images/statement.webp';
+import PrayerImage from '@/content/images/prayer.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -260,12 +262,39 @@ export default function About() {
         </div>
       </section>
 
-      {/* Statement and Prayer of Faith */}
+        {/* Statement of Faith */}
+      <section
+        data-3d-section
+        className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2">
+          <article data-3d-item data-tilt className="transform-gpu rounded-3xl border border-gold/30 bg-white p-8 shadow-lg [transform-style:preserve-3d] sm:p-10"><div className="mb-5 flex items-center gap-3">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gold text-white"><Anchor className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-2xl font-bold text-blue-700 sm:text-3xl">Statement of Faith</h2></div>
+            <div className="space-y-4 leading-7 text-gray-700">
+              <p>As The Anchor of Christ International Ministries, we believe that:</p>
+              <p>Jesus Christ is the Son of God and that He was crucified, died and was buried. On the Third day He rose from the dead and later ascended to heaven, where He remains at the Right Hand of The Father (The Almighty God).</p>
+              <p>
+                <ul>
+                  <li>We believe in the Holy Trinity, God the Father, Jesus Christ, Holy Spirit.</li>
+                  <li>We believe in Healing and Deliverance.</li>
+                  <li>We believe in the Anointing and Anointed items.</li>
+                  <li>We believe in the 5 Fold Ministries!</li>
+                </ul>
+              </p>
+            </div>
+          </article>
+
+          <article data-3d-item data-tilt className="hidden h-full items-center justify-center lg:flex">
+            <img
+              src={StatementImage} alt="Statement of Faith" className="h-full max-h-full w-full rounded-3xl object-cover shadow-lg"/>
+          </article>
+        </div>
+      </section>
+      
+      {/* Prayer of Faith */}
       <section data-3d-section className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
-          <article data-3d-item data-tilt className="transform-gpu rounded-3xl border border-gold/30 bg-white p-8 shadow-lg [transform-style:preserve-3d] sm:p-10">
-            <div className="mb-5 flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold text-white"><Anchor className="h-6 w-6" aria-hidden="true" /></div><h2 className="text-3xl font-bold text-blue-700">Statement of Faith</h2></div>
-            <div className="space-y-4 text-gray-700 leading-7"><p>Our church logo represents our statement of faith.</p><p>If you look at our church logo, there is a boat and an anchor.</p><p>We are anchored in Christ Jesus. The Angel of God said, we are in this unstable, turbulent world (the boat) but it is balance by the Anchor (Jesus Christ).</p><p>We are a prophetic, healing and deliverance ministry which believe that Jesus Christ is the Son of Christ and that he was crucified, died and was buried. On the third day He rose and later ascended to heaven where He remains at the right hand of the Father (the almighty God).</p><p>We believe in the Trinity (God the Father, Jesus Christ and the Holy Spirit) and the Fivefold ministries.</p></div>
+          <article data-3d-item data-tilt>
+            <img src={PrayerImage} alt="Prayer of Faith " className="hidden h-full items-center justify-center lg:flex transform-gpu rounded-3xl border border-gold/30 bg-white p-8 shadow-lg [transform-style:preserve-3d] sm:p-10" />
           </article>
 
           <article data-3d-item data-tilt className="transform-gpu rounded-3xl border border-blue-700/20 bg-blue-700 p-8 text-white shadow-lg [transform-style:preserve-3d] sm:p-10">
@@ -427,77 +456,6 @@ export default function About() {
                 <p className="text-gray-700">
                   We continue to expand our global footprint, equipping leaders and impacting nations. Our vision remains clear: to see the Gospel transform lives across the world.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Prophet/Leader Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-750 to-blue-600 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Image Placeholder */}
-            <div className="flex justify-center">
-              <div className="w-80 h-96 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">👨‍🙏</div>
-                  <p className="text-white font-semibold">Prophet Dr D. Chauke</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - Content */}
-            <div className="space-y-6">
-              <div>
-                <p className="text-gold font-semibold uppercase mb-2">Leadership</p>
-                <h2 className="text-4xl font-bold mb-4">Meet Prophet Dr D. Chauke</h2>
-              </div>
-
-              <p className="text-lg text-gray-100 leading-relaxed">
-                Prophet Dr D. Chauke is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for savouring Christ and bringing souls to Jesus.
-              </p>
-
-              <p className="text-lg text-gray-100 leading-relaxed">
-                Under God's guidance and spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across multiple countries. With teachings emphasising the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
-              </p>
-
-              <div className="space-y-4 pt-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-blue-700 font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Visionary Leadership</h3>
-                    <p className="text-gray-100">Guiding the ministry with clear vision and spiritual direction</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-blue-700 font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Spiritual Mentorship</h3>
-                    <p className="text-gray-100">Equipping leaders and believers for greater impact</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-blue-700 font-bold">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-1">Global Outreach</h3>
-                    <p className="text-gray-100">Extending the Gospel's reach across nations and cultures</p>
-                  </div>
-                </div>
-
-                <Link href="/the-prophet">
-                  <a className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-deep-blue transition-transform hover:-translate-y-1">
-                    READ HIS BIOGRAPHY <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                  </a>
-                </Link>
               </div>
             </div>
           </div>
