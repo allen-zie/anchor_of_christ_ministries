@@ -21,7 +21,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4 text-gold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/about"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">About Us</a></Link></li>
+              <li><Link href="/about"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">The Church</a></Link></li>
+              <li><Link href="/the-prophet"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">The Prophet</a></Link></li>
               <li><Link href="/ministries"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Ministries</a></Link></li>
               <li><Link href="/events"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Events</a></Link></li>
               <li><Link href="/giving"><a onClick={scrollToPageTop} className="hover:text-gold transition-colors">Give</a></Link></li>

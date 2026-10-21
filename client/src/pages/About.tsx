@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'wouter';
 import Footer from '@/components/Footer';
-import { BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
+import { ArrowRight, BookOpen, Anchor, Target, Heart, Play, Youtube } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -174,7 +175,7 @@ export default function About() {
           {/* Left Content */}
           <div className="space-y-6">
             <div className="hero-animate inline-block px-4 py-2 bg-gold/10 border border-gold rounded-full">
-              <p className="text-sm font-semibold text-gold uppercase">About Us</p>
+              <p className="text-sm font-semibold text-gold uppercase">The Church</p>
             </div>
 
             <h1 className="hero-animate text-5xl lg:text-6xl font-bold text-blue-700 leading-tight">
@@ -445,6 +446,12 @@ export default function About() {
                     <p className="text-gray-100">Extending the Gospel's reach across nations and cultures</p>
                   </div>
                 </div>
+
+                <Link href="/the-prophet">
+                  <a className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold text-deep-blue transition-transform hover:-translate-y-1">
+                    READ HIS BIOGRAPHY <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -4,7 +4,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
 import ThreeDBoat from '@/components/ThreeDBoat';
-import { Heart, Users, Globe, Hand } from 'lucide-react';
+import { ArrowRight, CalendarDays, Clock3, Heart, MapPin, Users, Globe, Hand } from 'lucide-react';
+import { formatEventDate, getUpcomingEvents } from '@/lib/events';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,6 +92,8 @@ export default function Home() {
       }
     };
   }, []);
+
+  const featuredEvents = getUpcomingEvents().slice(0, 2);
 
   return (
     <div ref={pageRef} className="min-h-screen bg-white">
@@ -184,6 +187,46 @@ export default function Home() {
                 <div className="mx-auto mt-5 h-1 w-8 rounded-full bg-[#f2a9c1]" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Preview */}
+      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-gold">Be part of the gathering</p>
+            <h2 className="text-3xl font-bold text-deep-blue sm:text-4xl">Upcoming at TAOCIM</h2>
+            <p className="mt-4 max-w-lg text-lg leading-8 text-gray-600">
+              Make room for worship, prayer, teaching, and fellowship. These are the next two scheduled events from our full ministry calendar.
+            </p>
+            <Link href="/events">
+              <a className="mt-7 inline-flex items-center gap-2 rounded-full bg-deep-blue px-6 py-3 text-sm font-bold text-white transition-all hover:-translate-y-1 hover:bg-blue-700" aria-label="View all upcoming events">
+                VIEW ALL EVENTS <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </Link>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {featuredEvents.map((event) => (
+              <Link key={event.id} href="/events">
+                <a className={`group block overflow-hidden rounded-3xl bg-gradient-to-br ${event.color} p-6 text-white shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`} aria-label={`View ${event.title} event details`}>
+                  <div className="mb-6 flex items-start justify-between gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 ring-1 ring-white/20">
+                      <CalendarDays className="h-6 w-6" aria-hidden="true" />
+                    </div>
+                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                  </div>
+                  <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-white/75">Upcoming event</p>
+                  <h3 className="mb-5 text-2xl font-bold text-white">{event.title}</h3>
+                  <div className="space-y-3 text-sm text-white/90">
+                    <p className="flex items-center gap-2"><CalendarDays className="h-4 w-4" aria-hidden="true" />{formatEventDate(event.startDate, event.endDate)}</p>
+                    <p className="flex items-center gap-2"><Clock3 className="h-4 w-4" aria-hidden="true" />{event.time}</p>
+                    <p className="flex items-center gap-2"><MapPin className="h-4 w-4" aria-hidden="true" />{event.location}</p>
+                  </div>
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
