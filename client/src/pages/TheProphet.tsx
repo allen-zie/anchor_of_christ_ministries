@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
 import { Anchor, ArrowRight, BookOpen, Heart, Sparkles } from 'lucide-react';
+import ProphetMainImage from '@/content/images/Prophet4.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,7 +50,7 @@ export default function TheProphet() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-gold bg-gold/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
-              <Sparkles className="h-4 w-4" aria-hidden="true" /> The Church
+              <Sparkles className="h-4 w-4" aria-hidden="true" /> The Prophet
             </p>
             <h1 className="text-5xl font-bold leading-tight text-deep-blue lg:text-6xl">
               Prophet Dr D. Chauke
@@ -58,14 +59,12 @@ export default function TheProphet() {
               The faith, calling, and leadership behind The Anchor of Christ International Ministries.
             </p>
           </div>
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-deep-blue via-blue-700 to-gold p-1 shadow-2xl">
-            <div className="flex min-h-[20rem] items-center justify-center rounded-[1.8rem] bg-gradient-to-br from-deep-blue/80 to-gold/25 p-8 text-center text-white">
+          <div className="relative overflow-hidden rounded-[2rem] ">
+            <div className="flex min-h-[20rem] items-center justify-center rounded-[1.8rem] p-8 text-center text-white">
               <div>
-                <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full bg-white/15 ring-8 ring-white/10">
-                  <Anchor className="h-12 w-12 text-gold" aria-hidden="true" />
-                </div>
-                <p className="text-2xl font-bold">Anchored in Christ</p>
-                <p className="mt-2 text-white/80">A ministry founded on prayer, faith, and a burden for souls.</p>
+                <img src={ProphetMainImage} alt="Prophet Dr D. Chauke" className="h-100 w-full object-cover" />
+                <h2 className="mt-4 text-2xl font-bold">Prophet Dr D. Chauke</h2>
+                <p className="mt-2 text-lg text-gray-600">Founder & Visionary</p>
               </div>
             </div>
           </div>
