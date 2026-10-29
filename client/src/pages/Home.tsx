@@ -237,12 +237,12 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   {/* Left - Image Placeholder */}
                   <div className="flex justify-center">
-                    <div className="w-80 h-96 ">
+                    <div className="w-95 ">
                       <div className="text-center">
                         <div className="text-6xl mb-4">
-                          <img src={ProphetImage} alt="Prophet Dr D. Chauke" className="w-full h-full object-cover rounded-full" />
+                          <img src={ProphetImage} alt="Prophet Dr D. Chauke" className="w-full h-full object-cover rounded-full transition-all duration-300 hover:-translate-y-4 hover:shadow-2xl" />
                         </div>
-                        <p className="text-white font-semibold">Prophet Dr D. Chauke</p>
+                        <p className="text-gray-700 font-semibold">Prophet Dr D. Chauke</p>
                       </div>
                     </div>
                   </div>
@@ -254,11 +254,11 @@ export default function Home() {
                       <h2 className="text-4xl font-bold mb-4">Meet Prophet Dr D. Chauke</h2>
                     </div>
       
-                    <p className="text-lg text-gray-100 leading-relaxed">
+                    <p className="text-lg text-gray-800 leading-relaxed">
                       Prophet Dr D. Chauke is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for savouring Christ and bringing souls to Jesus.
                     </p>
       
-                    <p className="text-lg text-gray-100 leading-relaxed">
+                    <p className="text-lg text-gray-800 leading-relaxed">
                       Under God's guidance and spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across multiple countries. With teachings emphasising the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
                     </p>
       
@@ -269,7 +269,7 @@ export default function Home() {
                         </div>
                         <div>
                           <h3 className="font-bold mb-1">Visionary Leadership</h3>
-                          <p className="text-gray-100">Guiding the ministry with clear vision and spiritual direction</p>
+                          <p className="text-gray-800">Guiding the ministry with clear vision and spiritual direction</p>
                         </div>
                       </div>
       
@@ -279,7 +279,7 @@ export default function Home() {
                         </div>
                         <div>
                           <h3 className="font-bold mb-1">Spiritual Mentorship</h3>
-                          <p className="text-gray-100">Equipping leaders and believers for greater impact</p>
+                          <p className="text-gray-800">Equipping leaders and believers for greater impact</p>
                         </div>
                       </div>
       
@@ -289,7 +289,7 @@ export default function Home() {
                         </div>
                         <div>
                           <h3 className="font-bold mb-1">Global Outreach</h3>
-                          <p className="text-gray-100">Extending the Gospel's reach across nations and cultures</p>
+                          <p className="text-gray-800">Extending the Gospel's reach across nations and cultures</p>
                         </div>
                       </div>
                     </div>

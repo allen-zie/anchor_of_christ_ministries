@@ -110,7 +110,7 @@ export default function TheProphet() {
             <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
               <div>
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-gold">The continuing vision</p>
-                <h2 className="mb-4 text-3xl font-bold">Winning souls. Building believers. Impacting nations.</h2>
+                <h2 className="mb-4 text-3xl font-bold text-gold">Winning souls. Building believers. Impacting nations.</h2>
                 <p className="max-w-3xl text-lg leading-8 text-white/85">
                   Today, the church continues to pursue the vision that shaped its beginning: to serve Christ, touch lives, win souls to Jesus, and help believers live with purpose and spiritual maturity.
                 </p>
