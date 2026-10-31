@@ -273,12 +273,12 @@ export default function About() {
               <p>As The Anchor of Christ International Ministries, we believe that:</p>
               <p>Jesus Christ is the Son of God and that He was crucified, died and was buried. On the Third day He rose from the dead and later ascended to heaven, where He remains at the Right Hand of The Father (The Almighty God).</p>
               <p>
-                <ul>
+                <ol>
                   <li>We believe in the Holy Trinity, God the Father, Jesus Christ, Holy Spirit.</li>
                   <li>We believe in Healing and Deliverance.</li>
                   <li>We believe in the Anointing and Anointed items.</li>
                   <li>We believe in the 5 Fold Ministries!</li>
-                </ul>
+                </ol>
               </p>
             </div>
           </article>
@@ -293,8 +293,9 @@ export default function About() {
       {/* Prayer of Faith */}
       <section data-3d-section className="bg-gradient-to-b from-light-gray to-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
-          <article data-3d-item data-tilt>
-            <img src={PrayerImage} alt="Prayer of Faith " className="hidden h-full items-center justify-center lg:flex transform-gpu rounded-3xl border border-gold/30 bg-white p-8 shadow-lg [transform-style:preserve-3d] sm:p-10" />
+          <article data-3d-item data-tilt className="hidden h-full items-center justify-center lg:flex">
+            <img
+              src={PrayerImage} alt="Statement of Faith" className="h-full max-h-full w-full rounded-3xl object-cover shadow-lg"/>
           </article>
 
           <article data-3d-item data-tilt className="transform-gpu rounded-3xl border border-blue-700/20 bg-blue-700 p-8 text-white shadow-lg [transform-style:preserve-3d] sm:p-10">
@@ -375,7 +376,29 @@ export default function About() {
               <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-blue-700">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">The Beginning of Our Journey in Faith</h3>
                 <p className="text-gray-700">
-                  The Anchor of Christ International Ministries was founded with a vision to reach souls and build believers. What started as a small group of faithful believers has become a beacon of hope.
+                The Anchor of Christ International Ministries was founded with a vision to reach souls and build believers. Established October 2012 in the bushes of How Mine. 
+                </p>
+                <p className="text-gray-700">
+                Moved to a carport at 2 Coventry Road Waterford for 2 weeks. 
+                </p>
+                <p className="text-gray-700">
+                Then on the later days of October 2012 the church moved to Jesus Life International 6th Ave and Fife Street Till February 2013. 
+                </p>
+              </div>
+            </div>
+
+            {/* 2013 */}
+            <div className="timeline-item flex gap-6">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  2013
+                </div>
+                <div className="w-1 h-24 bg-gradient-to-b from-gold to-transparent mt-4"></div>
+              </div>
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-gold">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Home away form Home</h3>
+                <p className="text-gray-700">
+                 On March 2013 a temporary home was established at 140 George Silundika and 14th Ave. This period marked the expansion of our ministry across multiple regions. For the longest period praise and worship was done here till October 2021.
                 </p>
               </div>
             </div>
@@ -383,12 +406,12 @@ export default function About() {
             {/* 2015 */}
             <div className="timeline-item flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   2015
                 </div>
-                <div className="w-1 h-24 bg-gradient-to-b from-gold to-transparent mt-4"></div>
+                <div className="w-1 h-24 bg-gradient-to-b from-red-500 to-transparent mt-4"></div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-gold">
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-red-500">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">Establishing Foundations, Building the Vision</h3>
                 <p className="text-gray-700">
                   We established our foundational structures and launched our first international outreach programs. This period marked the expansion of our ministry across multiple regions.
@@ -399,12 +422,12 @@ export default function About() {
             {/* 2018 */}
             <div className="timeline-item flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-gold font-bold text-lg shadow-lg">
                   2018
                 </div>
-                <div className="w-1 h-24 bg-gradient-to-b from-red-500 to-transparent mt-4"></div>
+                <div className="w-1 h-24 bg-gradient-to-b from-white to-transparent mt-4"></div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-red-500">
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-white">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">Growing in Faith, Launching Ministries, Teaching More Lives</h3>
                 <p className="text-gray-700">
                   Our ministry expanded significantly with new discipleship programs and leadership training initiatives. We reached thousands of lives across multiple nations.
@@ -415,13 +438,13 @@ export default function About() {
              {/* 2021 */}
             <div className="timeline-item flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-gold font-bold text-lg shadow-lg">
+                <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   2021
                 </div>
-                <div className="w-1 h-24 bg-gradient-to-b from-white to-transparent mt-4"></div>
+                <div className="w-1 h-24 bg-gradient-to-b from-pink-500 to-transparent mt-4"></div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-white">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">Started fellowshiping at the Prayer Mountain</h3>
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-pink-500">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">Arrival at Khami Prayer Garden</h3>
                 <p className="text-gray-700">
                   During the Covid-19 pandemic the church moved to fellowship at the Prayer Mountain for a year. It was at a period when is was not safe to fellowship in large numbers in closed environments, hence not looking past the chanllenges of rentals. Even during the tough times the church continued to grow and reach more souls to Jesus Christ through the Holy Spirit .
                 </p>
@@ -431,15 +454,15 @@ export default function About() {
             {/* 2022 */}
             <div className="timeline-item flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   2022
                 </div>
-                <div className="w-1 h-24 bg-gradient-to-b from-pink-500 to-transparent mt-4"></div>
+                <div className="w-1 h-24 bg-gradient-to-b from-blue-700 to-transparent mt-4"></div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-pink-500">
-                <h3 className="text-xl font-bold text-blue-700 mb-2">Moved to the Church Auditorium</h3>
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-blue-700">
+                <h3 className="text-xl font-bold text-blue-700 mb-2">In to the Promise Land, Home at last!</h3>
                 <p className="text-gray-700">
-                  After the pandemic, the church moved to the Church Auditorium, providing a more suitable space for our growing congregation and enabling us to host larger events and gatherings.
+                  After the pandemic, the church moved to the Church Auditorium with the grand opening being the first Sunday of January 2022. This provided a more suitable space for our growing congregation and enabling us to host larger events and gathering for the mission of God, Serving Christ, Touching live and Bringing Souls to Jesus.
                 </p>
               </div>
             </div>
@@ -447,11 +470,11 @@ export default function About() {
             {/* 2024 */}
             <div className="timeline-item flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   2024+
                 </div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-blue-700">
+              <div className="p-6 bg-white rounded-2xl shadow-lg flex-1 border-l-4 border-gold">
                 <h3 className="text-xl font-bold text-blue-700 mb-2">Expanding Our Reach, Equipping Leaders, Impacting Nations</h3>
                 <p className="text-gray-700">
                   We continue to expand our global footprint, equipping leaders and impacting nations. Our vision remains clear: to see the Gospel transform lives across the world.

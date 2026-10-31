@@ -11,10 +11,10 @@ export type EventItem = {
 
 export const events: EventItem[] = [
   {
-    id: 'sunday-service-october-2026',
+    id: 'sunday-service-november-2026',
     title: 'Sunday Service',
-    startDate: '2026-10-25',
-    time: '0900 HRS - 1530 HRS',
+    startDate: '2026-11-01',
+    time: '0900 hrs - 1530 hrs',
     location: 'Main Sanctuary',
     description: 'Join us for our weekly worship service featuring inspiring messages and corporate worship.',
     color: 'from-deep-blue to-blue-700',
@@ -22,18 +22,18 @@ export const events: EventItem[] = [
   {
     id: 'midweek-prayer-lunchhour-wednesday',
     title: 'Midweek Wednesday Lunch-hour Prayers',
-    startDate: '2026-10-21',
+    startDate: '2026-11-04',
     time: '1300hrs - 1400hrs',
-    location: 'Prayer Center',
+    location: 'Hope City Church',
     description: 'Deepen your faith through in-depth Bible study and powerful prayer sessions.',
     color: 'from-gold to-yellow-600',
   },
   {
     id: 'midweek-prayer-lunchhour-friday',
     title: 'Midweek Friday Lunch-hour Prayers',
-    startDate: '2026-10-23',
+    startDate: '2026-11-06',
     time: '1300hrs - 1400hrs',
-    location: 'Prayer Center',
+    location: 'Hope City Church',
     description: 'Deepen your faith through in-depth Bible study and powerful prayer sessions.',
     color: 'from-gold to-yellow-600',
   },
@@ -63,7 +63,7 @@ export const events: EventItem[] = [
     time: 'Day Visit',
     location: 'Conference Center',
     description: 'A special outing for our Sunday School students to learn and grow in their faith.',
-    color: 'from-gold to-yellow-600',
+    color: 'from-deep-blue to-blue-700',
   },
   {
     id: 'youth-retreat-april-2027',

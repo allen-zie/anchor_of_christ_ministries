@@ -56,6 +56,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
             <p>&copy; 2012 Anchor of Christ International Ministries. All rights reserved.</p>
+            <p>Developer by <a href="https://allen-portfolio-navigator.lovable.app/" className="hover:text-gold transition-colors">Zie</a> & <a href="" className="hover:text-gold transition-colors">McMilan</a></p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
