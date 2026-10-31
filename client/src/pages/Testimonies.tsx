@@ -1,14 +1,45 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type FormEvent } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
 import { Star } from 'lucide-react';
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Testimonies() {
   const pageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleTestimonySubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get('name') ?? '');
+    const surname = String(formData.get('surname') ?? '');
+    const subject = encodeURIComponent(`Testimony submission from ${name} ${surname}`);
+    const body = [
+      `Name: ${name}`,
+      `Surname: ${surname}`,
+      `Country: ${formData.get('country') ?? ''}`,
+      `City: ${formData.get('city') ?? ''}`,
+      `Phone number: ${formData.get('phone') ?? ''}`,
+      '',
+      'Testimony:',
+      String(formData.get('testimony') ?? ''),
+    ].join('\n');
+
+    window.location.href = `mailto:info@anchorofchrist.org?subject=${subject}&body=${encodeURIComponent(body)}`;
+  };
 
   useEffect(() => {
     if (contentRef.current) {
@@ -127,9 +158,57 @@ export default function Testimonies() {
           <p className="text-lg mb-8">
             Has God transformed your life through our ministry? We would love to hear your testimony and share it with our community.
           </p>
-          <button className="px-8 py-3 bg-gold text-deep-blue font-bold rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105">
-            Submit Your Testimony
-          </button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button className="px-8 py-3 bg-gold text-deep-blue font-bold rounded-full hover:bg-opacity-90 transition-all transform hover:scale-105">
+                Submit Your Testimony
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-h-[90vh] overflow-y-auto border-gold/30 bg-white p-6 sm:max-w-2xl sm:rounded-2xl sm:p-8">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-deep-blue">Share Your Testimony</DialogTitle>
+                <DialogDescription className="text-gray-600">
+                  Fill in the details below. Submitting opens your email app with your testimony addressed to the ministry, so you can review and send it.
+                </DialogDescription>
+              </DialogHeader>
+
+              <form onSubmit={handleTestimonySubmit} className="space-y-5">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <label htmlFor="testimony-name" className="text-sm font-semibold text-deep-blue">Name</label>
+                    <input id="testimony-name" name="name" type="text" autoComplete="given-name" required className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30" />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="testimony-surname" className="text-sm font-semibold text-deep-blue">Surname</label>
+                    <input id="testimony-surname" name="surname" type="text" autoComplete="family-name" required className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30" />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="testimony-country" className="text-sm font-semibold text-deep-blue">Country</label>
+                    <input id="testimony-country" name="country" type="text" autoComplete="country-name" required className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30" />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="testimony-city" className="text-sm font-semibold text-deep-blue">City</label>
+                    <input id="testimony-city" name="city" type="text" autoComplete="address-level2" required className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30" />
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
+                    <label htmlFor="testimony-phone" className="text-sm font-semibold text-deep-blue">Phone number</label>
+                    <input id="testimony-phone" name="phone" type="tel" autoComplete="tel" required className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30" />
+                  </div>
+                  <div className="space-y-2 sm:col-span-2">
+                    <label htmlFor="testimony-text" className="text-sm font-semibold text-deep-blue">Testimony</label>
+                    <textarea id="testimony-text" name="testimony" rows={5} required className="w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 shadow-sm transition placeholder:text-gray-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30" />
+                  </div>
+                </div>
+
+                <DialogFooter className="gap-3 sm:gap-3">
+                  <DialogClose asChild>
+                    <button type="button" className="rounded-full border border-gray-300 px-6 py-3 font-semibold text-gray-700 transition hover:bg-gray-50">Cancel</button>
+                  </DialogClose>
+                  <button type="submit" className="rounded-full bg-deep-blue px-6 py-3 font-bold text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2">Continue to Email</button>
+                </DialogFooter>
+              </form>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
