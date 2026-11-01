@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
+import EventDetailsDialog from '@/components/events/EventDetailsDialog';
 import { Calendar, MapPin, Clock, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { formatEventDate, getCompletedEvents, getUpcomingEvents, type EventItem } from '@/lib/events';
 
@@ -10,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Events() {
   const pageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
 
   useEffect(() => {
     if (contentRef.current) {
@@ -72,7 +74,13 @@ export default function Events() {
         </div>
       </div>
       <p className="mb-4 text-sm leading-6 text-white/85">{event.description}</p>
-      <button className="rounded-full bg-white px-4 py-2 text-sm font-bold text-deep-blue transition-all hover:bg-white/90">
+      <button
+        type="button"
+        onClick={() => setSelectedEvent(event)}
+        aria-haspopup="dialog"
+        aria-label={`Learn more about ${event.title}`}
+        className="rounded-full bg-white px-4 py-2 text-sm font-bold text-deep-blue transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-blue-800"
+      >
         Learn More
       </button>
     </div>
@@ -80,7 +88,6 @@ export default function Events() {
 
   return (
     <div ref={pageRef} className="min-h-screen bg-white">
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">
         <div className="max-w-4xl mx-auto">
@@ -160,6 +167,13 @@ export default function Events() {
         </div>
       </section>
 
+      <EventDetailsDialog
+        event={selectedEvent}
+        open={selectedEvent !== null}
+        onOpenChange={(open) => {
+          if (!open) setSelectedEvent(null);
+        }}
+      />
       <Footer />
     </div>
   );
