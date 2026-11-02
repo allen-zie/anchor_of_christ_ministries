@@ -41,6 +41,17 @@ export default function Sermons() {
     };
   }, []);
 
+  const audioSermons = [
+    { title: 'Spiritual Awakening', file: 'spiritual-awakening.ogg' },
+    { title: 'Stay focused on Jesus', file: 'stay-focused-on-jesus.ogg' },
+    { title: 'WhatsApp Audio 2026-11-02 at 15.12.15', file: 'whatsapp-audio-2026-11-02-at-15-12-15.ogg' },
+    { title: 'Where do you find God', file: 'where-do-you-find-god.ogg' },
+    { title: 'Your faith should not fail', file: 'your-faith-should-not-fail.ogg' },
+    { title: 'Hard Times', file: 'hard-times.ogg' },
+    { title: 'It is time to soar high like an eagle', file: 'it-is-time-to-soar-high-like-an-eagle.ogg' },
+    { title: 'Leave it for God', file: 'leave-it-for-god.ogg' },
+  ];
+
   const sermons = [
     {
       title: 'The Anchor of Your Soul',
@@ -98,6 +109,44 @@ export default function Sermons() {
           <p className="text-xl text-gray-600">
             Listen to inspiring messages that will strengthen your faith and guide your spiritual journey
           </p>
+        </div>
+      </section>
+
+      {/* Uploaded audio sermons */}
+      <section
+        className="py-12 px-4 sm:px-6 lg:px-8 bg-light-gray"
+        aria-labelledby="audio-sermons-heading"
+      >
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold mb-2">Listen now</p>
+            <h2 id="audio-sermons-heading" className="text-3xl font-bold text-deep-blue mb-3">
+              Audio Sermons
+            </h2>
+            <p className="text-gray-600">Listen to these messages directly on the page or download them for later.</p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            {audioSermons.map((sermon) => {
+              const audioUrl = `/audio/sermons/${sermon.file}`;
+
+              return (
+                <article key={sermon.file} className="rounded-xl border border-gray-100 bg-white p-5 shadow-md">
+                  <h3 className="text-xl font-bold text-deep-blue">{sermon.title}</h3>
+                  <audio controls preload="metadata" className="mt-4 w-full" aria-label={`Play ${sermon.title}`}>
+                    <source src={audioUrl} type="audio/ogg; codecs=opus" />
+                    Your browser does not support the audio player.
+                  </audio>
+                  <a
+                    href={audioUrl}
+                    download={sermon.file}
+                    className="mt-3 inline-block text-sm font-semibold text-deep-blue underline underline-offset-4 hover:text-gold"
+                  >
+                    Download audio
+                  </a>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
 
