@@ -80,11 +80,58 @@ export default function TheProphet() {
             </div>
             <div className="space-y-5 text-lg leading-8 text-gray-700">
               <p>
-                Prophet Dr D. Chauke carries a ministry shaped by a deep desire to see people anchored in Christ, rooted in the Word, and restored to hope. The vision for The Anchor of Christ International Ministries grew from that burden: to reach souls, build believers, and bring the love of Jesus into communities.
+                Prophet Dr Decide Chauke was born on August 14, 1974, in the Ndanga district of Zaka, Masvingo 
+                province, and he currently resides in Bulawayo. His life story is marked by a profound encounter 
+                with God that occurred in April 2006, during a Sunday morning at 2 am. It was at this moment that 
+                he experienced a divine visitation from an angel of God, a pivotal event that forever changed the 
+                course of his life.
               </p>
               <p>
-                As the calling became clearer through prayer and obedience, believers began gathering around the message. What started as a step of faith in 2012 developed into a ministry family with a prophetic, healing, and deliverance focus.
+                The divine visitation took place during a conference where Rev Sibanda was preaching, and it was 
+                during this gathering that Prophet Dr Decide Chauke made a deeply personal commitment to Jesus Christ. 
+                It was a moment of complete surrender and dedication, where he wholeheartedly offered his life to the 
+                service of Jesus. In this encounter, the angel conveyed to him a specific task, a divine calling 
+                that was to be fulfilled when He heads back to Zimbabwe.
               </p>
+              <p>
+                Following his personal commitment to Jesus Christ in April 2006, Prophet Dr Decide Chauke has been guided 
+                and mentored by the renowned Prophet TB Joshua. This mentoring relationship aligns with the biblical 
+                concept of discipleship, where seasoned believers impart their wisdom and guidance to those called to 
+                ministry. Just as Elijah mentored Elisha and Jesus mentored His disciples, Prophet Dr Decide Chauke has 
+                received valuable guidance and spiritual nurturing from Prophet TB Joshua, shaping his ministry and 
+                mission.
+              </p>
+              <p>
+                Throughout his ministry, Prophet Dr Decide Chauke's work is rooted in scriptural principles and teachings. 
+                One relevant scripture is James 5:14-15, which states, "Is anyone among you sick? Let them call the elders 
+                of the church to pray over them and anoint them with oil in the name of the Lord. And the prayer offered in 
+                faith will make the sick person well; the Lord will raise them up." In his prophetic healing ministry, Prophet 
+                Dr Decide Chauke follows this biblical model, praying for the sick and trusting in the power of God to bring 
+                about healing and restoration.
+              </p>
+              <p>
+                Prophet Dr Decide Chauke's commitment to bringing people closer to Jesus resonates with Jesus' own words in 
+                John 14 vs 6, where He declares, "I am the way and the truth and the life. No one comes to the Father except 
+                through me." Guided by this truth, Prophet Dr Decide Chauke's ministry focuses on leading individuals to Jesus, 
+                helping them find salvation, and nurturing their relationship with the Father.
+              </p>
+              <p>
+                In addition to his prophetic healing and deliverance ministry, Prophet Dr Decide Chauke is actively involved 
+                in philanthropic endeavors. Inspired by Jesus' teachings on caring for the marginalized and needy, he has 
+                initiated programs for prison evangelism, providing spiritual support to those incarcerated. He is also 
+                involved in fending, which involves assisting vulnerable individuals and families with basic needs. 
+                Furthermore, Prophet Dr Decide Chauke engages in home and work visits, offering guidance, prayer, and support 
+                to those in need. His commitment to schooling children and empowering homes reflects the biblical mandate 
+                to care for the orphaned and widowed, as seen in James 1 vs 27.
+              </p>
+              <p>
+                In summary, Prophet Dr Decide Chauke's journey encompasses divine encounters, mentorship, and a multifaceted 
+                ministry rooted in scriptural principles. Mentored by Prophet TB Joshua, he embraces the guidance and 
+                wisdom imparted to him. His ministry focuses on prophetic healing, deliverance, and philanthropy, aligning 
+                with biblical principles of faith, discipleship, and compassion. Through his work, he seeks to bring people 
+                closer to Jesus, following the example of Jesus Himself and embodying the teachings of Scripture
+              </p>
+
             </div>
           </article>
 

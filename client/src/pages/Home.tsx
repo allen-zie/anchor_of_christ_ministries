@@ -255,12 +255,25 @@ export default function Home() {
                     </div>
       
                     <p className="text-lg text-gray-800 leading-relaxed">
-                      Prophet Dr D. Chauke is a man of deep faith, vision, and unwavering commitment to God's Kingdom. With decades of experience in ministry, he has guided Anchor of Christ International Ministries with wisdom, integrity, and a passion for savouring Christ and bringing souls to Jesus.
+                      The life of Prophet Dr D. Chauke took a defining turn in April 2006 following a profound spiritual encounter that would shape his destiny and set him on a path of ministry.
                     </p>
       
                     <p className="text-lg text-gray-800 leading-relaxed">
-                      Under God's guidance and spiritual leadership, the ministry has grown from a small congregation to an international movement impacting lives across multiple countries. With teachings emphasising the power of God's Word, the importance of discipleship, and the necessity of serving others with Christ's love.
+                      From a life-changing divine visitation to a journey of spiritual growth under the mentorship of the late Prophet T.B. Joshua, his story is one of faith, surrender, and an unwavering commitment to God's calling.
                     </p>
+
+                    <p className="text-lg text-gray-800 leading-relaxed">
+                      Today, his ministry extends beyond the pulpit, embracing prophetic healing, deliverance, evangelism, and humanitarian outreach. Through prison evangelism, support for vulnerable families, home visits, and initiatives empowering children through education, he seeks to put his faith into action.
+                    </p>
+
+                    <p className="text-lg text-gray-800 leading-relaxed">
+                      But what happened in the early hours of that Sunday morning in 2006? What was the calling entrusted to him, and how did it shape the ministry we see today?
+                    </p>
+
+                    <p className="text-lg text-gray-800 leading-relaxed">
+                      Discover the remarkable journey of Prophet Dr Decide Chauke a story of divine encounter, spiritual mentorship, and a lifelong pursuit of bringing people closer to Jesus Christ.
+                    </p>
+
       
                     <div className="space-y-4 pt-4">
                       <div className="flex items-start gap-4">
