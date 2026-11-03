@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Footer from '@/components/Footer';
-import { Play, Tv, BookOpen, Users } from 'lucide-react';
+import { Play, Tv, BookOpen, Users, Image as GalleryIcon } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +52,7 @@ export default function Media() {
             Media & Resources
           </h1>
           <p className="text-xl text-gray-600">
-            Access sermons, testimonies, and live services from Anchor of Christ International Ministries
+            Access sermons, testimonies, live services, and ministry photos and footage from Anchor of Christ International Ministries
           </p>
         </div>
       </section>
@@ -60,7 +60,7 @@ export default function Media() {
       {/* Media Categories */}
       <section ref={contentRef} className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Sermons */}
             <Link href="/sermons">
               <div className="media-card p-8 bg-gradient-to-br from-gold to-yellow-600 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
@@ -116,6 +116,26 @@ export default function Media() {
                 <div className="text-center">
                   <span className="inline-block px-4 py-2 bg-white text-gold font-bold rounded-full text-sm">
                     Read Stories →
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Gallery */}
+            <Link href="/gallery">
+              <div className="media-card p-8 bg-gradient-to-br from-deep-blue to-blue-700 rounded-lg shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                    <GalleryIcon className="w-8 h-8" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-center text-gold">Gallery</h3>
+                <p className="text-center text-sm text-gray-100 mb-4">
+                  View photos and footage from our building project and ministry gatherings
+                </p>
+                <div className="text-center">
+                  <span className="inline-block px-4 py-2 bg-white text-blue-700 font-bold rounded-full text-sm">
+                    Browse Gallery →
                   </span>
                 </div>
               </div>

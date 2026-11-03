@@ -127,6 +127,20 @@ export default function Ministries() {
       color: 'from-white to-red-600',
       link: '/children-ministry',
     },
+    {
+      title: 'Building Ministry',
+      description: 'Supporting the development and care of spaces for worship, fellowship, and service.',
+      icon: '🏗️',
+      color: 'from-deep-blue to-blue-700',
+      link: '/building-ministry',
+    },
+    {
+      title: 'Compassion Ministry',
+      description: 'Sharing Christ’s love through practical care, encouragement, and community service.',
+      icon: '🤝',
+      color: 'from-gold to-yellow-600',
+      link: '/compassion-ministry',
+    },
     /*{
       title: 'Anna Group',
       description: 'A ministry dedicated to honoring and supporting our senior members.',
@@ -226,7 +240,7 @@ export default function Ministries() {
       {/* Ministries Grid */}
       <section ref={ministriesRef} className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ministries.map((ministry, index) => (
               <Link key={index} href={ministry.link}>
                 <div className={`ministry-card p-8 bg-gradient-to-br ${ministry.color} rounded-2xl shadow-lg text-white hover:shadow-2xl transition-all transform hover:scale-105 cursor-pointer h-full flex flex-col justify-between`}>
@@ -291,7 +305,7 @@ export default function Ministries() {
             <div className="stat-item">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Heart className="w-6 h-6 text-deep-blue" />
-                <p className="text-3xl lg:text-4xl font-bold text-deep-blue">4</p>
+                <p className="text-3xl lg:text-4xl font-bold text-deep-blue">6</p>
               </div>
               <p className="text-sm text-gray-600">Active Ministries</p>
             </div>

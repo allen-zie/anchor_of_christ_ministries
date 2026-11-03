@@ -23,6 +23,9 @@ import WomensMinistry from "./pages/WomensMinistry";
 import YouthMinistry from "./pages/YouthMinistry";
 import ChildrensMinistry from "./pages/ChildrensMinistry";
 import AnnaGroup from "./pages/AnnaGroup";
+import BuildingMinistry from "./pages/BuildingMinistry";
+import CompassionMinistry from "./pages/CompassionMinistry";
+import Gallery from "./pages/Gallery";
 
 function ScrollRestoration() {
   const [location] = useLocation();
@@ -77,6 +80,7 @@ const pageByPath = {
   "/events": Events,
   "/testimonies": Testimonies,
   "/media": Media,
+  "/gallery": Gallery,
   "/sermons": Sermons,
   "/live-services": LiveServices,
   "/giving": Giving,
@@ -86,6 +90,8 @@ const pageByPath = {
   "/youth-ministry": YouthMinistry,
   "/children-ministry": ChildrensMinistry,
   "/anna-group": AnnaGroup,
+  "/building-ministry": BuildingMinistry,
+  "/compassion-ministry": CompassionMinistry,
   "/404": NotFound,
 } as const;
 

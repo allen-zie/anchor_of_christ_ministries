@@ -1,0 +1,23 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home" },
+    { "path": "/about", "title": "About" },
+    { "path": "/the-prophet", "title": "The Prophet" },
+    { "path": "/ministries", "title": "Ministries" },
+    { "path": "/events", "title": "Events" },
+    { "path": "/testimonies", "title": "Testimonies" },
+    { "path": "/media", "title": "Media" },
+    { "path": "/gallery", "title": "Gallery" },
+    { "path": "/sermons", "title": "Sermons" },
+    { "path": "/live-services", "title": "Live Services" },
+    { "path": "/giving", "title": "Giving" },
+    { "path": "/contact", "title": "Contact" },
+    { "path": "/men-ministry", "title": "Men's Ministry" },
+    { "path": "/women-ministry", "title": "Women's Ministry" },
+    { "path": "/youth-ministry", "title": "Youth Ministry" },
+    { "path": "/children-ministry", "title": "Children's Ministry" },
+    { "path": "/anna-group", "title": "Anna Group" },
+    { "path": "/building-ministry", "title": "Building Ministry" },
+    { "path": "/compassion-ministry", "title": "Compassion Ministry" }
+  ]
+}
